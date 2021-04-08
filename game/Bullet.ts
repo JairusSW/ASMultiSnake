@@ -16,7 +16,7 @@ export class Bullet {
 	public delta_velocity: Vector = new Vector();
 	public position: Vector = new Vector();
 
-	public visible: bool = false;
+	public visible: boolean = false;
 
 	public move(): void {
 		// only move if this is visible.
@@ -94,6 +94,7 @@ export class Bullet {
 		if (dist_sq < rad_sum_sq) {
 			return true;
 		}
+		
 		return false;
 	}
 }

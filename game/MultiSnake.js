@@ -30,40 +30,31 @@ var laser = new Audio('/audio/laserSmall_000.ogg')
 var enemyLaser = new Audio('/audio/laserSmall_003.ogg')
 var explosion = new Audio('/audio/explosion-hq.mp3')
 
-// Happy music! 😀
-song.play()
+//song.play()
 
 song.loop = true
-
-let enemyKeys = {
-    leftKeyPress: false,
-    rightKeyPress: false,
-    upKeyPress: false,
-    downKeyPress: false,
-    spaceKeyPress: false
-}
 
 // When a keydown event is pressed, set the bool for that key to true
 document.addEventListener('keydown', (event) => {
     if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
-        if (leftKeyPress === false) leftKeyPress = true
-        if (enemyKeys['leftKeyPress'] === false) enemyKeys['leftKeyPress'] = true
+        leftKeyPress = true;
+        sock.send(`${room}:${username}:direction.2`)
     }
     if (event.code === 'ArrowUp' || event.code === 'KeyW') {
-        if (upKeyPress === false) upKeyPress = true
-        if (enemyKeys['upKeyPress'] === false) enemyKeys['upKeyPress'] = true
+        upKeyPress = true;
+        sock.send(`${room}:${username}:direction.0`)
     }
     if (event.code === 'ArrowRight' || event.code === 'KeyD') {
-        if (rightKeyPress === false) rightKeyPress = true
-        if (enemyKeys['rightKeyPress'] === false) enemyKeys['rightKeyPress'] = true
+        rightKeyPress = true;
+        sock.send(`${room}:${username}:direction.3`)
     }
     if (event.code === 'ArrowDown' || event.code === 'KeyS') {
-        if (downKeyPress === false) downKeyPress = true
-        if (enemyKeys['downKeyPress'] === false) enemyKeys['downKeyPress'] = true
+        downKeyPress = true;
+        sock.send(`${room}:${username}:direction.1`)
     }
     if (event.code === 'Space') {
-        if (spaceKeyPress === false) spaceKeyPress = true
-        if (enemyKeys['spaceKeyPress'] === false) enemyKeys['spaceKeyPress'] = true
+        spaceKeyPress = true;
+        sock.send(`${room}:${username}:direction.shoot`)
     }
 
 });
@@ -71,48 +62,62 @@ document.addEventListener('keydown', (event) => {
 // When a keyup event is pressed, set the bool for that key to false
 document.addEventListener('keyup', (event) => {
     if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
-        if (leftKeyPress === true) leftKeyPress = false
-        if (enemyKeys['leftKeyPress'] === true) enemyKeys['leftKeyPress'] = false
+        leftKeyPress = false;
     }
     if (event.code === 'ArrowUp' || event.code === 'KeyW') {
-        if (upKeyPress === true) upKeyPress = false
-        if (enemyKeys['upKeyPress'] === true) enemyKeys['upKeyPress'] = false
+        upKeyPress = false;
     }
     if (event.code === 'ArrowRight' || event.code === 'KeyD') {
-        if (rightKeyPress === true) rightKeyPress = false
-        if (enemyKeys['rightKeyPress'] === true) enemyKeys['rightKeyPress'] = false
+        rightKeyPress = false;
     }
     if (event.code === 'ArrowDown' || event.code === 'KeyS') {
-        if (downKeyPress === true) downKeyPress = false
-        if (enemyKeys['downKeyPress'] === true) enemyKeys['downKeyPress'] = false
+        downKeyPress = false;
     }
     if (event.code === 'Space') {
-        if (spaceKeyPress === true) spaceKeyPress = false
-        if (enemyKeys['spaceKeyPress'] === true) enemyKeys['spaceKeyPress'] = false
+        spaceKeyPress = false;
     }
 });
 
 // Each frame render runs this function
 function renderFrame() {
-	let delta = 0;
-	if (last_time !== 0) {
-		delta = (new Date().getTime() - last_time);
-	}
-	last_time = new Date().getTime();
+    let delta = 0;
+    if (last_time !== 0) {
+        delta = (new Date().getTime() - last_time);
+    }
+    last_time = new Date().getTime();
 
-	// call the LoopCallback function in the WASM module
-	exports.LoopCallback(delta,
-		leftKeyPress, rightKeyPress,
-		upKeyPress, downKeyPress,
-		spaceKeyPress, enemyKeys['leftKeyPress'], enemyKeys['rightKeyPress'], enemyKeys['upKeyPress'], enemyKeys['downKeyPress'], enemyKeys['spaceKeyPress']);
+    // call the LoopCallback function in the WASM module
+    exports.LoopCallback(delta,
+        leftKeyPress, rightKeyPress,
+        upKeyPress, downKeyPress,
+        spaceKeyPress);
 
     // Turn of click-shoot
 
     spaceKeyPress = false
 
-	// requestAnimationFrame calls renderFrame the next time a frame is rendered
-	requestAnimationFrame(renderFrame);
+    // requestAnimationFrame calls renderFrame the next time a frame is rendered
+    requestAnimationFrame(renderFrame);
 }
+
+// When a keyup event is pressed, set the bool for that key to false
+document.addEventListener('keyup', (event) => {
+    if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
+        leftKeyPress = false;
+    }
+    if (event.code === 'ArrowUp' || event.code === 'KeyW') {
+        upKeyPress = false;
+    }
+    if (event.code === 'ArrowRight' || event.code === 'KeyD') {
+        rightKeyPress = false;
+    }
+    if (event.code === 'ArrowDown' || event.code === 'KeyS') {
+        downKeyPress = false;
+    }
+    if (event.code === 'Space') {
+        spaceKeyPress = false;
+    }
+})
 
 // Import AssemblyScript WebSocket!
 

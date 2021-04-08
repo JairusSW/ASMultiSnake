@@ -60,7 +60,6 @@ export class MultiSnake {
 
 	public socket: WebSocket = new WebSocket('ws://localhost:3000')
 
-
 	constructor() {
 
 		// set the singleton
@@ -221,20 +220,15 @@ class EnemyMovementTracker {
 const enemyMovement = new EnemyMovementTracker()
 
 export function LoopCallback(delta_ms: i32,
-	leftKeyPress: boolean, rightKeyPress: boolean,
-	upKeyPress: boolean, downKeyPress: boolean,
-	spaceKeyPress: boolean, enemyLeftKeyPress: boolean, enemyRightKeyPress: boolean,
-	enemyUpKeyPress: boolean, enemyDownKeyPress: boolean,
-	enemySpaceKeyPress: boolean): void {
-
+	leftKeyPress: bool, rightKeyPress: bool,
+	upKeyPress: bool, downKeyPress: bool,
+	spaceKeyPress: bool): void {
 	MultiSnake.SN.bulletCoolDown -= delta_ms;
-
-	MultiSnake.SN.enemyBulletCoolDown -= delta_ms;
 
 	Renderer.SN.clear();
 	Renderer.DELTA = <f32>delta_ms / 1000.0;
 	//RunAI();
-	
+
 	if (leftKeyPress) {
 		MultiSnake.SN.playerShip.changeDirection(DIRECTION.LEFT)
 	}
@@ -248,48 +242,20 @@ export function LoopCallback(delta_ms: i32,
 		MultiSnake.SN.playerShip.changeDirection(DIRECTION.DOWN)
 	}
 
-	if (enemyLeftKeyPress && !enemyMovement.leftKeyPress) {
-		enemyMovement.leftKeyPress = true
-		MultiSnake.SN.socket.send(`${room}:${username}:direction.${DIRECTION.LEFT}`)
-	}
-	else if (enemyRightKeyPress && !enemyMovement.rightKeyPress) {
-		enemyMovement.rightKeyPress = true
-		MultiSnake.SN.socket.send(`${room}:${username}:direction.${DIRECTION.RIGHT}`)
-	}
-	else if (enemyUpKeyPress && !enemyMovement.upKeyPress) {
-		enemyMovement.upKeyPress = true
-		MultiSnake.SN.socket.send(`${room}:${username}:direction.${DIRECTION.UP}`)
-	}
-	else if (enemyDownKeyPress && !enemyMovement.downKeyPress) {
-		enemyMovement.downKeyPress = true
-		MultiSnake.SN.socket.send(`${room}:${username}:direction.${DIRECTION.DOWN}`)
-	} else if (enemySpaceKeyPress && !enemyMovement.spaceKeyPress) {
-		enemyMovement.spaceKeyPress = true
-		MultiSnake.SN.socket.send(`${room}:${username}:direction.space`)
-	}
-
 	//socket.sendMessage('position.PLAYER-ID.' + leftKeyPress.toString() + '.' + rightKeyPress.toString() + '.' + upKeyPress.toString() + '.' + downKeyPress.toString())
 
 	if (spaceKeyPress && MultiSnake.SN.bulletCoolDown <= 0) {
 		MultiSnake.SN.bulletCoolDown = MultiSnake.LAUNCH_WAIT;
 		MultiSnake.SN.launchBullet();
-		
+
 		playLaser();
+
+		//socket.sendMessage('shoot.PLAYER-ID.')
 
 	}
 
-	enemyMovement.leftKeyPress = leftKeyPress
 
-	enemyMovement.rightKeyPress = rightKeyPress
-
-	enemyMovement.upKeyPress = upKeyPress
-
-	enemyMovement.downKeyPress = downKeyPress
-
-	enemyMovement.spaceKeyPress = spaceKeyPress
-
-	// Player -> Enemy Hitbox
-
+	// Player -> Enemy Hit
 	for (var i: i32 = 0; i < MultiSnake.SN.bulletArray.length; i++) {
 		if (MultiSnake.SN.bulletArray[i].visible == true) {
 			MultiSnake.SN.bulletArray[i].move();
@@ -297,18 +263,18 @@ export function LoopCallback(delta_ms: i32,
 
 			const Shiphit = MultiSnake.SN.bulletArray[i].hitTest(MultiSnake.SN.enemyShip)
 
-			if (Shiphit) { 
-				playExplosion()
-				MultiSnake.SN.activateExplosion(0, 0)
+			if (Shiphit) {
+				playExplosion();
+				MultiSnake.SN.enemyShip.explode();
 			}
 			// check if bullet hits other player (I)
 			//playExplosion();
 
 		}
+
 	}
 
-	// Enemy -> Player Hitbox
-
+	// Enemy -> Player Hit
 	for (var ii: i32 = 0; ii < MultiSnake.SN.enemyBulletArray.length; ii++) {
 		if (MultiSnake.SN.enemyBulletArray[ii].visible == true) {
 			MultiSnake.SN.enemyBulletArray[ii].move();
@@ -316,16 +282,17 @@ export function LoopCallback(delta_ms: i32,
 
 			const Shiphit = MultiSnake.SN.enemyBulletArray[ii].hitTest(MultiSnake.SN.playerShip)
 
-			if (Shiphit) { 
-				playExplosion()
-				MultiSnake.SN.activateExplosion(0, 0)
+			if (Shiphit) {
+				playExplosion();
+				MultiSnake.SN.playerShip.explode();
 			}
 			// check if bullet hits other player (I)
 			//playExplosion();
 
 		}
-	}
 
+	}
+	
 	for (i = 0; i < MultiSnake.SN.explosionArray.length; i++) {
 		MultiSnake.SN.explosionArray[i].move();
 		MultiSnake.SN.explosionArray[i].draw();

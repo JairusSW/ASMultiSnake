@@ -1,5 +1,6 @@
 import { Vector } from './Vector';
 import { Renderer } from './Renderer';
+import { MultiSnake } from './MultiSnake';
 import {
 	iShip, DIRECTION,
 	VEL_SQ, VELOCITY,
@@ -13,11 +14,13 @@ export class PlayerShip implements iShip {
 
 	// movement, position, scale and rotation
 	public direction: DIRECTION = DIRECTION.DOWN;
-	private _position: Vector = new Vector(0.0, 0.0);
+	private _position: Vector = new Vector(-0.5, 0.0);
 	private _rotation: f32 = 0.0;
 	public trail: StaticArray<f32> = new StaticArray<f32>(MAX_TRAIL_LEN * 2);
 	public lastTrailDist: f32 = 0.0;
 	private _scaledRadius: f32 = 0.05;
+	private _scaledRadiusSQ: f32 = 0.0025;
+	public visible: boolean = true;
 
 	// scale
 	public scale: f32 = 0.05;
@@ -65,6 +68,20 @@ export class PlayerShip implements iShip {
 
 	set scaledRadius(sr: f32) {
 		this._scaledRadius = sr;
+	}
+
+	public hitTestPoint(x: f32, y: f32): boolean {
+		// _scaledRadiusSQ
+		let x_dist: f32 = x - this.position.x;
+		let y_dist: f32 = y - this.position.y;
+		let dist_sq: f32 = x_dist * x_dist + y_dist * y_dist;
+		return (this._scaledRadiusSQ > dist_sq);
+	}
+
+	public explode(): void {
+		this.visible = false;
+		// Just turn invisible
+		MultiSnake.SN.activateExplosion(this.position.x, this.position.y);
 	}
 
 	public shiftTrail(): void {
@@ -119,14 +136,16 @@ export class PlayerShip implements iShip {
 	}
 
 	public draw(): void {
-		Renderer.SN.renderLineLoop(this.shipBody, this.position, this._rotation, this.scale, 0x00_ff_00_ff);
-		Renderer.SN.renderLineLoop(this.shipCockpit, this.position, this._rotation, this.scale, 0x00_ff_ff_ff);
-		Renderer.SN.renderLineLoop(this.leftGun, this.position, this._rotation, this.scale, 0xa1_00_00_ff);
-		Renderer.SN.renderLineLoop(this.rightGun, this.position, this._rotation, this.scale, 0xa1_00_00_ff);
+		if (this.visible == true) {
+			Renderer.SN.renderLineLoop(this.shipBody, this.position, this._rotation, this.scale, 0x00_ff_00_ff);
+			Renderer.SN.renderLineLoop(this.shipCockpit, this.position, this._rotation, this.scale, 0x00_ff_ff_ff);
+			Renderer.SN.renderLineLoop(this.leftGun, this.position, this._rotation, this.scale, 0xa1_00_00_ff);
+			Renderer.SN.renderLineLoop(this.rightGun, this.position, this._rotation, this.scale, 0xa1_00_00_ff);
 
-		Renderer.SN.renderLineLoop(this.trail, ZERO_VEC, 0.0, 1.0, 0x00_ff_00_ff, false);
+			// RENDER THE TRAIL
+			Renderer.SN.renderLineLoop(this.trail, ZERO_VEC, 0.0, 1.0, 0x00_ff_00_ff, false);
+		}
 
-		// RENDER THE TRAIL
 	}
 
 	public changeDirection(dir: DIRECTION): void {
