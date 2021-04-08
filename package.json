@@ -1,0 +1,48 @@
+{
+  "devDependencies": {
+    "assemblyscript": "^0.18.23"
+  },
+  "scripts": {
+    "asbuild:untouched": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts game/MultiSnake.ts --runtime incremental  --target debug --exportTable --exportRuntime --importMemory",
+    "asbuild:optimized": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts game/MultiSnake.ts --runtime incremental  --target release --exportTable --exportRuntime --importMemory",
+    "asbuild": "npm run asbuild:untouched",
+    "serve": "serve ./game",
+    "test": "node tests",
+    "server": "node multiplayerServer.js"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.23",
+    "as-bind": "^0.6.1",
+    "as-websocket": "^1.0.9",
+    "localtunnel": "^2.0.1",
+    "rezidb": "^1.0.1",
+    "serve": "^11.3.2",
+    "ws": "^7.4.4"
+  },
+  "name": "as-spaceshooter",
+  "version": "1.0.0",
+  "description": "uhh",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JairusSW/ASMultiSnake.git"
+  },
+  "keywords": [
+    "assemblyscript",
+    "game",
+    "multiplayer",
+    "demo",
+    "showcase",
+    "webgl",
+    "aswebglue"
+  ],
+  "author": "Jairus Tanaka / Rick Battagline",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JairusSW/ASMultiSnake/issues"
+  },
+  "homepage": "https://github.com/JairusSW/ASMultiSnake#readme"
+}
