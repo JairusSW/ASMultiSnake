@@ -23,14 +23,17 @@ var rightKeyPress = false;
 var upKeyPress = false;
 var downKeyPress = false;
 var spaceKeyPress = false;
+var cloakKeyPress = false;
 
 // The Audio objects
 var song = new Audio('/audio/song-hq.mp3')
 var laser = new Audio('/audio/laserSmall_000.ogg')
 var enemyLaser = new Audio('/audio/laserSmall_003.ogg')
 var explosion = new Audio('/audio/explosion-hq.mp3')
+var cloakOn = new Audio('/audio/phaserUp2.ogg')
+var cloakOff = new Audio('/audio/phaserDown2.ogg')
 
-//song.play()
+song.play()
 
 song.loop = true
 
@@ -56,7 +59,10 @@ document.addEventListener('keydown', (event) => {
         spaceKeyPress = true;
         sock.send(`${room}:${username}:direction.shoot`)
     }
-
+    if (event.code === 'KeyI') {
+        cloakKeyPress = true
+        sock.send(`${room}:${username}:direction.cloak`)
+    }
 });
 
 // When a keyup event is pressed, set the bool for that key to false
@@ -74,6 +80,9 @@ document.addEventListener('keyup', (event) => {
         downKeyPress = false;
     }
     if (event.code === 'Space') {
+        spaceKeyPress = false;
+    }
+    if (event.code === 'KeyI') {
         spaceKeyPress = false;
     }
 });
@@ -90,7 +99,7 @@ function renderFrame() {
     exports.LoopCallback(delta,
         leftKeyPress, rightKeyPress,
         upKeyPress, downKeyPress,
-        spaceKeyPress);
+        spaceKeyPress, cloakKeyPress);
 
     // Turn of click-shoot
 
@@ -99,25 +108,6 @@ function renderFrame() {
     // requestAnimationFrame calls renderFrame the next time a frame is rendered
     requestAnimationFrame(renderFrame);
 }
-
-// When a keyup event is pressed, set the bool for that key to false
-document.addEventListener('keyup', (event) => {
-    if (event.code === 'ArrowLeft' || event.code === 'KeyA') {
-        leftKeyPress = false;
-    }
-    if (event.code === 'ArrowUp' || event.code === 'KeyW') {
-        upKeyPress = false;
-    }
-    if (event.code === 'ArrowRight' || event.code === 'KeyD') {
-        rightKeyPress = false;
-    }
-    if (event.code === 'ArrowDown' || event.code === 'KeyS') {
-        downKeyPress = false;
-    }
-    if (event.code === 'Space') {
-        spaceKeyPress = false;
-    }
-})
 
 // Import AssemblyScript WebSocket!
 
@@ -149,6 +139,14 @@ class Binding {
                 playExplosion: () => {
                     explosion.pause()
                     explosion.play()
+                },
+                playCloakOn: () => {
+                    cloakOn.pause()
+                    cloakOn.play()
+                },
+                playCloakOff: () => {
+                    cloakOff.pause()
+                    cloakOff.play()
                 },
                 log: (message) => {
 

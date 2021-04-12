@@ -14,7 +14,7 @@ export class PlayerShip implements iShip {
 
 	// movement, position, scale and rotation
 	public direction: DIRECTION = DIRECTION.DOWN;
-	private _position: Vector = new Vector(-0.5, 0.0);
+	private _position: Vector = new Vector(0.0, 0.0);
 	private _rotation: f32 = 0.0;
 	public trail: StaticArray<f32> = new StaticArray<f32>(MAX_TRAIL_LEN * 2);
 	public lastTrailDist: f32 = 0.0;

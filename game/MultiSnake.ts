@@ -5,11 +5,17 @@ import { Renderer } from "./Renderer"
 import { Bullet } from "./Bullet";
 import { Explosion } from "./Explosion";
 import { DIRECTION } from "./iShip"
-import { PlayerShip } from "./PlayerShip";
-import { EnemyShip } from "./EnemyShip";
+
+import { Ship } from "./Ship"
+
 import { WebSocket } from "./WebSocket";
+import { GenericShip } from "./GenericShip";
 
 declare function playLaser(): void
+
+declare function playCloakOn(): void
+
+declare function playCloakOff(): void
 
 declare function playEnemyLaser(): void
 
@@ -42,8 +48,12 @@ export class MultiSnake {
 	public explosionArray: Array<Explosion> = new Array<Explosion>();
 	public bulletArray: Array<Bullet> = new Array<Bullet>();
 	public enemyBulletArray: Array<Bullet> = new Array<Bullet>()
-	public playerShip: PlayerShip = new PlayerShip();
-	public enemyShip: EnemyShip = new EnemyShip();
+
+	public ships: Ship = new Ship()
+
+	public playerOneShip: GenericShip = this.ships.addShip('p1', 'green')
+
+	public playerTwoShip: GenericShip = this.ships.addShip('p2', 'red')
 
 	// array indexes
 	public explosionIndex: i32 = 0;
@@ -104,8 +114,6 @@ export class MultiSnake {
 
 				const fromUser = context[1]
 
-				log('From: ' + fromUser + 'Me: ' + username)
-
 				if (!fromUser.startsWith(username)) {
 		
 					const content = context[2]
@@ -129,12 +137,36 @@ export class MultiSnake {
 						// Different sound
 
 					}
+
+					if (direction.startsWith('cloak')) {
+						
+						// Invisibility Cloak Toggle
+
+						if (MultiSnake.SN.playerTwoShip.visible === true) {
+
+							playCloakOff()
+
+							MultiSnake.SN.playerTwoShip.visible = false
+
+							log('Cloak Off!')
+
+						} else {
+
+							playCloakOn()
+
+							MultiSnake.SN.playerTwoShip.visible = true
+
+							log('Cloak On!')
+
+						}
+
+					}
 					
-					if (direction !== 'shoot') {
+					if (direction !== 'shoot' && direction !== 'cloak') {
 						
 						// Move!
 
-						MultiSnake.SN.enemyShip.changeDirection(i32(parseInt(direction)))
+						MultiSnake.SN.playerTwoShip.changeDirection(i32(parseInt(direction)))
 
 					}
 
@@ -184,8 +216,8 @@ export class MultiSnake {
 			}
 			if (count++ > this.bulletArray.length) return;
 		}
-		this.bulletArray[this.bulletIndex].launch(MultiSnake.SN.playerShip.direction,
-			MultiSnake.SN.playerShip.position);
+		this.bulletArray[this.bulletIndex].launch(MultiSnake.SN.playerOneShip.direction,
+			MultiSnake.SN.playerOneShip.position);
 	}
 
 	public launchEnemyBullet(): void {
@@ -201,8 +233,8 @@ export class MultiSnake {
 			}
 			if (enemyCount++ > this.enemyBulletArray.length) return;
 		}
-		this.enemyBulletArray[this.bulletIndex].launch(MultiSnake.SN.enemyShip.direction,
-			MultiSnake.SN.enemyShip.position);
+		this.enemyBulletArray[this.bulletIndex].launch(MultiSnake.SN.playerTwoShip.direction,
+			MultiSnake.SN.playerTwoShip.position);
 	}
 }
 
@@ -222,24 +254,28 @@ const enemyMovement = new EnemyMovementTracker()
 export function LoopCallback(delta_ms: i32,
 	leftKeyPress: bool, rightKeyPress: bool,
 	upKeyPress: bool, downKeyPress: bool,
-	spaceKeyPress: bool): void {
+	spaceKeyPress: bool, cloakKeyPress: boolean): void {
 	MultiSnake.SN.bulletCoolDown -= delta_ms;
 
 	Renderer.SN.clear();
 	Renderer.DELTA = <f32>delta_ms / 1000.0;
 	//RunAI();
 
+	if (cloakKeyPress) {
+		MultiSnake.SN.playerOneShip.visible = cloakKeyPress
+	}
+
 	if (leftKeyPress) {
-		MultiSnake.SN.playerShip.changeDirection(DIRECTION.LEFT)
+		MultiSnake.SN.playerOneShip.changeDirection(DIRECTION.LEFT)
 	}
 	else if (rightKeyPress) {
-		MultiSnake.SN.playerShip.changeDirection(DIRECTION.RIGHT)
+		MultiSnake.SN.playerOneShip.changeDirection(DIRECTION.RIGHT)
 	}
 	else if (upKeyPress) {
-		MultiSnake.SN.playerShip.changeDirection(DIRECTION.UP)
+		MultiSnake.SN.playerOneShip.changeDirection(DIRECTION.UP)
 	}
 	else if (downKeyPress) {
-		MultiSnake.SN.playerShip.changeDirection(DIRECTION.DOWN)
+		MultiSnake.SN.playerOneShip.changeDirection(DIRECTION.DOWN)
 	}
 
 	//socket.sendMessage('position.PLAYER-ID.' + leftKeyPress.toString() + '.' + rightKeyPress.toString() + '.' + upKeyPress.toString() + '.' + downKeyPress.toString())
@@ -261,11 +297,11 @@ export function LoopCallback(delta_ms: i32,
 			MultiSnake.SN.bulletArray[i].move();
 			MultiSnake.SN.bulletArray[i].draw();
 
-			const Shiphit = MultiSnake.SN.bulletArray[i].hitTest(MultiSnake.SN.enemyShip)
+			const Shiphit = MultiSnake.SN.bulletArray[i].hitTest(MultiSnake.SN.playerTwoShip)
 
 			if (Shiphit) {
 				playExplosion();
-				MultiSnake.SN.enemyShip.explode();
+				MultiSnake.SN.playerTwoShip.explode();
 			}
 			// check if bullet hits other player (I)
 			//playExplosion();
@@ -280,11 +316,11 @@ export function LoopCallback(delta_ms: i32,
 			MultiSnake.SN.enemyBulletArray[ii].move();
 			MultiSnake.SN.enemyBulletArray[ii].draw();
 
-			const Shiphit = MultiSnake.SN.enemyBulletArray[ii].hitTest(MultiSnake.SN.playerShip)
+			const Shiphit = MultiSnake.SN.enemyBulletArray[ii].hitTest(MultiSnake.SN.playerOneShip)
 
 			if (Shiphit) {
 				playExplosion();
-				MultiSnake.SN.playerShip.explode();
+				MultiSnake.SN.playerOneShip.explode();
 			}
 			// check if bullet hits other player (I)
 			//playExplosion();
@@ -297,11 +333,11 @@ export function LoopCallback(delta_ms: i32,
 		MultiSnake.SN.explosionArray[i].move();
 		MultiSnake.SN.explosionArray[i].draw();
 	}
-	MultiSnake.SN.playerShip.move();
-	MultiSnake.SN.playerShip.draw();
+	MultiSnake.SN.playerOneShip.move();
+	MultiSnake.SN.playerOneShip.draw();
 
-	MultiSnake.SN.enemyShip.move();
-	MultiSnake.SN.enemyShip.draw();
+	MultiSnake.SN.playerTwoShip.move();
+	MultiSnake.SN.playerTwoShip.draw();
 
 	MultiSnake.SN.respawnCheck();
 

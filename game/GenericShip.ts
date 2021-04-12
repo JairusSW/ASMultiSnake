@@ -5,12 +5,13 @@ import {
 	VEL_SQ, VELOCITY,
 	MAX_TRAIL_LEN, TRAIL_DIST
 } from './iShip';
+
 import { MultiSnake } from './MultiSnake';
 
 const ZERO_VEC: Vector = new Vector(0.0, 0.0);
 
-export class EnemyShip implements iShip {
-	// readonly static properties of EnemyShip
+export class GenericShip implements iShip {
+	// readonly static properties of GenericShip
 
 	// movement, position, scale and rotation
 	public direction: DIRECTION = DIRECTION.DOWN;
@@ -21,6 +22,16 @@ export class EnemyShip implements iShip {
 	public lastTrailDist: f32 = 0.0;
 	private _scaledRadius: f32 = 0.05;
 	private _scaledRadiusSQ: f32 = 0.0025;
+
+    // colors
+
+    public trailColor: i32 = 0xff_00_00_ff
+
+    public shipColor: i32 = 0xff_00_00_ff
+
+    public cockpitColor: i32 = 0x00_ff_ff_ff
+
+    public gunColor: i32 = 0xff_00_00_ff
 
 	// scale
 	public scale: f32 = 0.05;
@@ -135,13 +146,13 @@ export class EnemyShip implements iShip {
 
 	public draw(): void {
 		if (this.visible == true) {
-			Renderer.SN.renderLineLoop(this.shipBody, this.position, this._rotation, this.scale, 0xff_00_00_ff);
-			Renderer.SN.renderLineLoop(this.shipCockpit, this.position, this._rotation, this.scale, 0x00_ff_ff_ff);
-			Renderer.SN.renderLineLoop(this.leftGun, this.position, this._rotation, this.scale, 0xa1_00_00_ff);
-			Renderer.SN.renderLineLoop(this.rightGun, this.position, this._rotation, this.scale, 0xa1_00_00_ff);
+			Renderer.SN.renderLineLoop(this.shipBody, this.position, this._rotation, this.scale, this.shipColor);
+			Renderer.SN.renderLineLoop(this.shipCockpit, this.position, this._rotation, this.scale, this.cockpitColor);
+			Renderer.SN.renderLineLoop(this.leftGun, this.position, this._rotation, this.scale, this.gunColor);
+			Renderer.SN.renderLineLoop(this.rightGun, this.position, this._rotation, this.scale, this.gunColor);
 
 			// RENDER THE TRAIL
-			Renderer.SN.renderLineLoop(this.trail, ZERO_VEC, 0.0, 1.0, 0xff_00_00_ff, false);
+			Renderer.SN.renderLineLoop(this.trail, ZERO_VEC, 0.0, 1.0, this.trailColor, false);
 		}
 	}
 

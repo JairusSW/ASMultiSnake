@@ -3,14 +3,14 @@
  (type $i32_=>_i32 (func (param i32) (result i32)))
  (type $i32_=>_none (func (param i32)))
  (type $i32_i32_=>_i32 (func (param i32 i32) (result i32)))
- (type $i32_f32_=>_none (func (param i32 f32)))
  (type $i32_i32_i32_=>_none (func (param i32 i32 i32)))
  (type $none_=>_none (func))
+ (type $i32_f32_=>_none (func (param i32 f32)))
  (type $i32_i32_i32_=>_i32 (func (param i32 i32 i32) (result i32)))
- (type $i32_=>_f32 (func (param i32) (result f32)))
  (type $i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32)))
  (type $i32_i32_f32_=>_none (func (param i32 i32 f32)))
  (type $i32_f32_f32_=>_none (func (param i32 f32 f32)))
+ (type $i32_=>_f32 (func (param i32) (result f32)))
  (type $i32_i32_=>_f64 (func (param i32 i32) (result f64)))
  (type $i32_i32_i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32 i32 i32)))
  (type $i32_i32_i32_i32_i32_i32_i32_=>_none (func (param i32 i32 i32 i32 i32 i32 i32)))
@@ -54,32 +54,34 @@
  (data (i32.const 3628) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\18\00\00\00E\00n\00t\00e\00r\00 \00A\00 \00R\00o\00o\00m\00\00\00\00\00")
  (data (i32.const 3676) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00a\00d\00d\00c\00l\00i\00e\00n\00t\00:\00\00\00\00\00\00\00\00\00")
  (data (i32.const 3724) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 3756) "\1c\00\00\00\00\00\00\00\00\00\00\00!\00\00\00\0c\00\00\00p\0e\00\00\00\00\00\00\a0\0e\00\00")
+ (data (i32.const 3756) "\1c\00\00\00\00\00\00\00\00\00\00\00\"\00\00\00\0c\00\00\00p\0e\00\00\00\00\00\00\a0\0e\00\00")
  (data (i32.const 3788) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0e\00\00\00m\00e\00s\00s\00a\00g\00e\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 3836) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\00:\00\00\00\00\00\00\00\00\00\00\00")
  (data (i32.const 3868) "|\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00^\00\00\00E\00l\00e\00m\00e\00n\00t\00 \00t\00y\00p\00e\00 \00m\00u\00s\00t\00 \00b\00e\00 \00n\00u\00l\00l\00a\00b\00l\00e\00 \00i\00f\00 \00a\00r\00r\00a\00y\00 \00i\00s\00 \00h\00o\00l\00e\00y\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 3996) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\0c\00\00\00F\00r\00o\00m\00:\00 \00")
- (data (i32.const 4028) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\08\00\00\00M\00e\00:\00 \00\00\00\00\00")
- (data (i32.const 4060) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00C\00o\00n\00t\00e\00n\00t\00:\00 \00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4108) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\00.\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4140) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1c\00\00\00M\00o\00v\00i\00n\00g\00 \00E\00n\00e\00m\00y\00:\00 \00")
- (data (i32.const 4188) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\00\00\00s\00h\00o\00o\00t\00\00\00")
- (data (i32.const 4220) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\008\00\00\00S\00H\00O\00O\00O\00O\00O\00O\00O\00O\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00!\00\00\00\00\00")
- (data (i32.const 4300) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00s\00t\00a\00t\00i\00c\00a\00r\00r\00a\00y\00.\00t\00s\00\00\00\00\00\00\00")
- (data (i32.const 4364) "\1c\00\00\00\00\00\00\00\00\00\00\00\"\00\00\00\08\00\00\00\01\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4396) "\1c\00\00\00\00\00\00\00\00\00\00\00#\00\00\00\08\00\00\00\02\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4428) "L\00\00\00\00\00\00\00\00\00\00\00\19\00\00\008\00\00\00\cd\cc\cc\bd333\bf\cd\cc\cc=333\bf\00\00\00?\cd\cc\cc=\00\00\00?\00\00\00?\00\00\00\00\cd\cc\cc>\00\00\00\bf\00\00\00?\00\00\00\bf\cd\cc\cc=\00\00\00\00")
- (data (i32.const 4508) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\00\00\00\00\9a\99\19\bf\cd\ccL\be\00\00\00\00\00\00\00\00\cd\cc\cc\bd\cd\ccL>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4572) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\cd\cc\cc\be\cd\cc\cc\bd\cd\cc\cc\be\00\00\00\bf\9a\99\99\be\00\00\00\bf\9a\99\99\be\9a\99\99\be\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4636) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\9a\99\99>\9a\99\99\be\9a\99\99>\00\00\00\bf\cd\cc\cc>\00\00\00\bf\cd\cc\cc>\cd\cc\cc\bd\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4700) "L\00\00\00\00\00\00\00\00\00\00\00\19\00\00\008\00\00\00\cd\cc\cc\bd333\bf\cd\cc\cc=333\bf\00\00\00?\cd\cc\cc=\00\00\00?\00\00\00?\00\00\00\00\cd\cc\cc>\00\00\00\bf\00\00\00?\00\00\00\bf\cd\cc\cc=\00\00\00\00")
- (data (i32.const 4780) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\00\00\00\00\9a\99\19\bf\cd\ccL\be\00\00\00\00\00\00\00\00\cd\cc\cc\bd\cd\ccL>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4844) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\cd\cc\cc\be\cd\cc\cc\bd\cd\cc\cc\be\00\00\00\bf\9a\99\99\be\00\00\00\bf\9a\99\99\be\9a\99\99\be\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4908) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\9a\99\99>\9a\99\99\be\9a\99\99>\00\00\00\bf\cd\cc\cc>\00\00\00\bf\cd\cc\cc>\cd\cc\cc\bd\00\00\00\00\00\00\00\00\00\00\00\00")
- (data (i32.const 4972) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00w\00s\00:\00/\00/\00l\00o\00c\00a\00l\00h\00o\00s\00t\00:\003\000\000\000\00\00\00\00\00\00\00")
- (data (i32.const 5036) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
- (data (i32.const 5100) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
- (data (i32.const 5168) "%\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\08\00\00\02\00\00\00A\00\00\00\02\00\00\00\81\08\00\00\02\00\00\00\81\00\00\00\02\00\00\00\01\t\00\00\02\00\00\00\01\01\00\00\02\00\00\00\01\19\00\00\02\00\00\00\01\1a\00\00\02\00\00\00\01\n\00\00\02\00\00\00\01\02\00\00\02\00\00\00\02\t\00\00\00\00\00\00\02\n\00\00\00\00\00\00\02A\00\00\00\00\00\00B\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00$\19\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00")
+ (data (i32.const 3996) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00C\00o\00n\00t\00e\00n\00t\00:\00 \00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4044) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\02\00\00\00.\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4076) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\1c\00\00\00M\00o\00v\00i\00n\00g\00 \00E\00n\00e\00m\00y\00:\00 \00")
+ (data (i32.const 4124) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\00\00\00s\00h\00o\00o\00t\00\00\00")
+ (data (i32.const 4156) "L\00\00\00\00\00\00\00\00\00\00\00\01\00\00\008\00\00\00S\00H\00O\00O\00O\00O\00O\00O\00O\00O\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00T\00!\00\00\00\00\00")
+ (data (i32.const 4236) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\00\00\00c\00l\00o\00a\00k\00\00\00")
+ (data (i32.const 4268) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\14\00\00\00C\00l\00o\00a\00k\00 \00O\00f\00f\00!\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4316) ",\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\12\00\00\00C\00l\00o\00a\00k\00 \00O\00n\00!\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4364) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00s\00t\00a\00t\00i\00c\00a\00r\00r\00a\00y\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 4428) "\1c\00\00\00\00\00\00\00\00\00\00\00#\00\00\00\08\00\00\00\01\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4460) "\1c\00\00\00\00\00\00\00\00\00\00\00$\00\00\00\08\00\00\00\02\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4492) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00~\00l\00i\00b\00/\00a\00r\00r\00a\00y\00b\00u\00f\00f\00e\00r\00.\00t\00s\00\00\00\00\00\00\00")
+ (data (i32.const 4556) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\04\00\00\00p\001\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4588) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\n\00\00\00g\00r\00e\00e\00n\00\00\00")
+ (data (i32.const 4620) "L\00\00\00\00\00\00\00\00\00\00\00\19\00\00\008\00\00\00\cd\cc\cc\bd333\bf\cd\cc\cc=333\bf\00\00\00?\cd\cc\cc=\00\00\00?\00\00\00?\00\00\00\00\cd\cc\cc>\00\00\00\bf\00\00\00?\00\00\00\bf\cd\cc\cc=\00\00\00\00")
+ (data (i32.const 4700) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\00\00\00\00\9a\99\19\bf\cd\ccL\be\00\00\00\00\00\00\00\00\cd\cc\cc\bd\cd\ccL>\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4764) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\cd\cc\cc\be\cd\cc\cc\bd\cd\cc\cc\be\00\00\00\bf\9a\99\99\be\00\00\00\bf\9a\99\99\be\9a\99\99\be\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4828) "<\00\00\00\00\00\00\00\00\00\00\00\19\00\00\00 \00\00\00\9a\99\99>\9a\99\99\be\9a\99\99>\00\00\00\bf\cd\cc\cc>\00\00\00\bf\cd\cc\cc>\cd\cc\cc\bd\00\00\00\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4892) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\04\00\00\00p\002\00\00\00\00\00\00\00\00\00")
+ (data (i32.const 4924) "\1c\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00\06\00\00\00r\00e\00d\00\00\00\00\00\00\00")
+ (data (i32.const 4956) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00&\00\00\00w\00s\00:\00/\00/\00l\00o\00c\00a\00l\00h\00o\00s\00t\00:\003\000\000\000\00\00\00\00\00\00\00")
+ (data (i32.const 5020) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00*\00\00\00O\00b\00j\00e\00c\00t\00 \00a\00l\00r\00e\00a\00d\00y\00 \00p\00i\00n\00n\00e\00d\00\00\00")
+ (data (i32.const 5084) "<\00\00\00\00\00\00\00\00\00\00\00\01\00\00\00(\00\00\00O\00b\00j\00e\00c\00t\00 \00i\00s\00 \00n\00o\00t\00 \00p\00i\00n\00n\00e\00d\00\00\00\00\00")
+ (data (i32.const 5152) "&\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00A\08\00\00\02\00\00\00A\00\00\00\02\00\00\00\81\08\00\00\02\00\00\00\81\00\00\00\02\00\00\00\01\t\00\00\02\00\00\00\01\01\00\00\02\00\00\00\01\19\00\00\02\00\00\00\01\1a\00\00\02\00\00\00\01\n\00\00\02\00\00\00\01\02\00\00\02\00\00\00\02\t\00\00\00\00\00\00\02\n\00\00\00\00\00\00\02A\00\00\00\00\00\00B\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00\02A\00\00\00\00\00\00 \00\00\00\00\00\00\00 \00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00$\19\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\02A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00\10A\82\00\00\00\00\00\00\00\00\00\00\00\00\00\04A\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00 \00\00\00\00\00\00\00")
  (import "env" "abort" (func $~lib/builtins/abort (param i32 i32 i32 i32)))
  (import "webgl" "createContextFromCanvas" (func $game/webgl/createContextFromCanvas (param i32 i32) (result i32)))
  (import "webgl" "createShader" (func $game/webgl/createShader (param i32 i32) (result i32)))
@@ -99,6 +101,8 @@
  (import "WebSocket" "sendWS" (func $game/WebSocket/sendWS (param i32 i32)))
  (import "MultiSnake" "log" (func $game/MultiSnake/log (param i32)))
  (import "MultiSnake" "playEnemyLaser" (func $game/MultiSnake/playEnemyLaser))
+ (import "MultiSnake" "playCloakOff" (func $game/MultiSnake/playCloakOff))
+ (import "MultiSnake" "playCloakOn" (func $game/MultiSnake/playCloakOn))
  (import "WebSocket" "sendPointer" (func $game/WebSocket/sendPointer (param f64 i32 i32)))
  (import "MultiSnake" "setTimeoutCall" (func $game/MultiSnake/setTimeoutCall (param i32 i32)))
  (import "WebSocket" "initWS" (func $game/WebSocket/initWS (param i32) (result i32)))
@@ -462,8 +466,7 @@
  (global $~lib/rt/tlsf/ROOT (mut i32) (i32.const 0))
  (global $~lib/ASC_LOW_MEMORY_LIMIT i32 (i32.const 0))
  (global $~lib/ASC_SHRINK_LEVEL i32 (i32.const 0))
- (global $game/PlayerShip/ZERO_VEC (mut i32) (i32.const 0))
- (global $game/EnemyShip/ZERO_VEC (mut i32) (i32.const 0))
+ (global $game/GenericShip/ZERO_VEC (mut i32) (i32.const 0))
  (global $game/MultiSnake/username (mut i32) (i32.const 2544))
  (global $game/MultiSnake/room (mut i32) (i32.const 2592))
  (global $game/MultiSnake/MultiSnake.SN (mut i32) (i32.const 0))
@@ -471,10 +474,10 @@
  (global $~lib/builtins/i32.MAX_VALUE i32 (i32.const 2147483647))
  (global $game/MultiSnake/enemyMovement (mut i32) (i32.const 0))
  (global $game/MultiSnake/MultiSnake i32 (i32.const 23))
- (global $~lib/rt/__rtti_base i32 (i32.const 5168))
- (global $~lib/memory/__data_end i32 (i32.const 5468))
- (global $~lib/memory/__stack_pointer (mut i32) (i32.const 21852))
- (global $~lib/memory/__heap_base i32 (i32.const 21852))
+ (global $~lib/rt/__rtti_base i32 (i32.const 5152))
+ (global $~lib/memory/__data_end i32 (i32.const 5460))
+ (global $~lib/memory/__stack_pointer (mut i32) (i32.const 21844))
+ (global $~lib/memory/__heap_base i32 (i32.const 21844))
  (export "__asbind_entryfile_flag" (global $node_modules/as-bind/lib/assembly/as-bind/__asbind_entryfile_flag))
  (export "__asbind_String_ID" (global $node_modules/as-bind/lib/assembly/as-bind/__asbind_String_ID))
  (export "__asbind_ArrayBuffer_ID" (global $node_modules/as-bind/lib/assembly/as-bind/__asbind_ArrayBuffer_ID))
@@ -514,10 +517,12 @@
  (export "MultiSnake#set:bulletArray" (func $export:game/MultiSnake/MultiSnake#set:bulletArray))
  (export "MultiSnake#get:enemyBulletArray" (func $export:game/MultiSnake/MultiSnake#get:enemyBulletArray))
  (export "MultiSnake#set:enemyBulletArray" (func $export:game/MultiSnake/MultiSnake#set:enemyBulletArray))
- (export "MultiSnake#get:playerShip" (func $export:game/MultiSnake/MultiSnake#get:playerShip))
- (export "MultiSnake#set:playerShip" (func $export:game/MultiSnake/MultiSnake#set:playerShip))
- (export "MultiSnake#get:enemyShip" (func $export:game/MultiSnake/MultiSnake#get:enemyShip))
- (export "MultiSnake#set:enemyShip" (func $export:game/MultiSnake/MultiSnake#set:enemyShip))
+ (export "MultiSnake#get:ships" (func $export:game/MultiSnake/MultiSnake#get:ships))
+ (export "MultiSnake#set:ships" (func $export:game/MultiSnake/MultiSnake#set:ships))
+ (export "MultiSnake#get:playerOneShip" (func $export:game/MultiSnake/MultiSnake#get:playerOneShip))
+ (export "MultiSnake#set:playerOneShip" (func $export:game/MultiSnake/MultiSnake#set:playerOneShip))
+ (export "MultiSnake#get:playerTwoShip" (func $export:game/MultiSnake/MultiSnake#get:playerTwoShip))
+ (export "MultiSnake#set:playerTwoShip" (func $export:game/MultiSnake/MultiSnake#set:playerTwoShip))
  (export "MultiSnake#get:explosionIndex" (func $export:game/MultiSnake/MultiSnake#get:explosionIndex))
  (export "MultiSnake#set:explosionIndex" (func $export:game/MultiSnake/MultiSnake#set:explosionIndex))
  (export "MultiSnake#get:bulletIndex" (func $export:game/MultiSnake/MultiSnake#get:bulletIndex))
@@ -2851,7 +2856,7 @@
   call $~lib/memory/memory.fill
   local.get $3
  )
- (func $start:game/PlayerShip
+ (func $start:game/GenericShip
   memory.size
   i32.const 16
   i32.shl
@@ -2873,14 +2878,10 @@
   f32.const 0
   f32.const 0
   call $game/Vector/Vector#constructor
-  global.set $game/PlayerShip/ZERO_VEC
+  global.set $game/GenericShip/ZERO_VEC
  )
- (func $start:game/EnemyShip
-  i32.const 0
-  f32.const 0
-  f32.const 0
-  call $game/Vector/Vector#constructor
-  global.set $game/EnemyShip/ZERO_VEC
+ (func $start:game/Ship
+  call $start:game/GenericShip
  )
  (func $game/Renderer/Renderer#set:gl (param $0 i32) (param $1 i32)
   local.get $0
@@ -4873,11 +4874,6 @@
   call $~lib/array/Array<~lib/string/String>#set:length_
   local.get $3
  )
- (func $~lib/string/String.__concat (param $0 i32) (param $1 i32) (result i32)
-  local.get $0
-  local.get $1
-  call $~lib/string/String#concat
- )
  (func $~lib/string/String#startsWith (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
   (local $4 i32)
@@ -4923,6 +4919,11 @@
   call $~lib/util/string/compareImpl
   i32.eqz
  )
+ (func $~lib/string/String.__concat (param $0 i32) (param $1 i32) (result i32)
+  local.get $0
+  local.get $1
+  call $~lib/string/String#concat
+ )
  (func $~lib/string/String.__not (param $0 i32) (result i32)
   local.get $0
   i32.const 0
@@ -4938,13 +4939,13 @@
  (func $game/MultiSnake/MultiSnake#set:enemyBulletIndex (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=28
+  i32.store offset=32
  )
  (func $~lib/array/Array<game/Bullet/Bullet>#get:length (param $0 i32) (result i32)
   local.get $0
   i32.load offset=12
  )
- (func $game/EnemyShip/EnemyShip#get:position (param $0 i32) (result i32)
+ (func $game/GenericShip/GenericShip#get:position (param $0 i32) (result i32)
   local.get $0
   i32.load offset=12
  )
@@ -4957,6 +4958,11 @@
   local.get $1
   f32.load offset=4
   call $game/Vector/Vector#set:y
+ )
+ (func $game/GenericShip/GenericShip#set:visible (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store8 offset=4
  )
  (func $~lib/util/string/isSpace (param $0 i32) (result i32)
   (local $1 i32)
@@ -5358,7 +5364,7 @@
   local.get $1
   call $~lib/util/string/strtol<f64>
  )
- (func $game/EnemyShip/EnemyShip#set:direction (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:direction (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store
@@ -5379,7 +5385,7 @@
   i32.ge_u
   if
    i32.const 2336
-   i32.const 4320
+   i32.const 4384
    i32.const 113
    i32.const 41
    call $~lib/builtins/abort
@@ -5414,7 +5420,7 @@
   i32.ge_u
   if
    i32.const 2336
-   i32.const 4320
+   i32.const 4384
    i32.const 128
    i32.const 41
    call $~lib/builtins/abort
@@ -5425,12 +5431,12 @@
   local.get $2
   call $~lib/staticarray/StaticArray<f32>#__uset
  )
- (func $game/EnemyShip/EnemyShip#changeDirection (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#changeDirection (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  call $game/EnemyShip/EnemyShip#set:direction
+  call $game/GenericShip/GenericShip#set:direction
   local.get $0
-  call $game/EnemyShip/EnemyShip#shiftTrail
+  call $game/GenericShip/GenericShip#shiftTrail
  )
  (func $game/WebSocket/WebSocket#on (param $0 i32) (param $1 i32) (param $2 i32)
   local.get $0
@@ -5512,30 +5518,68 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $game/PlayerShip/PlayerShip#get:position (param $0 i32) (result i32)
-  local.get $0
-  i32.load offset=4
- )
- (func $game/PlayerShip/PlayerShip#set:direction (param $0 i32) (param $1 i32)
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:buckets (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
  )
- (func $game/PlayerShip/PlayerShip#set:_position (param $0 i32) (param $1 i32)
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:bucketsMask (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=4
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entries (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
   local.get $0
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $game/PlayerShip/PlayerShip#set:_rotation (param $0 i32) (param $1 f32)
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesCapacity (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesOffset (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=16
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesCount (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
+ )
+ (func $game/Ship/Ship#set:ships (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $game/MultiSnake/MultiSnake#set:ships (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=12
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $game/GenericShip/GenericShip#set:_rotation (param $0 i32) (param $1 f32)
   local.get $0
   local.get $1
   f32.store offset=8
  )
- (func $game/PlayerShip/PlayerShip#set:trail (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:_position (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=12
@@ -5544,96 +5588,7 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $game/PlayerShip/PlayerShip#set:lastTrailDist (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=16
- )
- (func $game/PlayerShip/PlayerShip#set:_scaledRadius (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=20
- )
- (func $game/PlayerShip/PlayerShip#set:_scaledRadiusSQ (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=24
- )
- (func $game/PlayerShip/PlayerShip#set:visible (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=28
- )
- (func $game/PlayerShip/PlayerShip#set:scale (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=32
- )
- (func $game/PlayerShip/PlayerShip#set:shipBody (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=36
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $game/PlayerShip/PlayerShip#set:shipCockpit (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=40
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $game/PlayerShip/PlayerShip#set:leftGun (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=44
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $game/PlayerShip/PlayerShip#set:rightGun (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=48
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $game/MultiSnake/MultiSnake#set:playerShip (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $game/EnemyShip/EnemyShip#set:visible (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store8 offset=4
- )
- (func $game/EnemyShip/EnemyShip#set:_rotation (param $0 i32) (param $1 f32)
-  local.get $0
-  local.get $1
-  f32.store offset=8
- )
- (func $game/EnemyShip/EnemyShip#set:_position (param $0 i32) (param $1 i32)
-  local.get $0
-  local.get $1
-  i32.store offset=12
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
- )
- (func $game/EnemyShip/EnemyShip#set:trail (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:trail (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=16
@@ -5642,66 +5597,549 @@
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $game/EnemyShip/EnemyShip#set:lastTrailDist (param $0 i32) (param $1 f32)
+ (func $game/GenericShip/GenericShip#set:lastTrailDist (param $0 i32) (param $1 f32)
   local.get $0
   local.get $1
   f32.store offset=20
  )
- (func $game/EnemyShip/EnemyShip#set:_scaledRadius (param $0 i32) (param $1 f32)
+ (func $game/GenericShip/GenericShip#set:_scaledRadius (param $0 i32) (param $1 f32)
   local.get $0
   local.get $1
   f32.store offset=24
  )
- (func $game/EnemyShip/EnemyShip#set:_scaledRadiusSQ (param $0 i32) (param $1 f32)
+ (func $game/GenericShip/GenericShip#set:_scaledRadiusSQ (param $0 i32) (param $1 f32)
   local.get $0
   local.get $1
   f32.store offset=28
  )
- (func $game/EnemyShip/EnemyShip#set:scale (param $0 i32) (param $1 f32)
+ (func $game/GenericShip/GenericShip#set:trailColor (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  f32.store offset=32
+  i32.store offset=32
  )
- (func $game/EnemyShip/EnemyShip#set:shipBody (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:shipColor (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=36
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
  )
- (func $game/EnemyShip/EnemyShip#set:shipCockpit (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:cockpitColor (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=40
-  local.get $0
-  local.get $1
-  i32.const 0
-  call $~lib/rt/itcms/__link
  )
- (func $game/EnemyShip/EnemyShip#set:leftGun (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:gunColor (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=44
+ )
+ (func $game/GenericShip/GenericShip#set:scale (param $0 i32) (param $1 f32)
+  local.get $0
+  local.get $1
+  f32.store offset=48
+ )
+ (func $game/GenericShip/GenericShip#set:shipBody (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=52
   local.get $0
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $game/EnemyShip/EnemyShip#set:rightGun (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:shipCockpit (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=48
+  i32.store offset=56
   local.get $0
   local.get $1
   i32.const 0
   call $~lib/rt/itcms/__link
  )
- (func $game/MultiSnake/MultiSnake#set:enemyShip (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip#set:leftGun (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=60
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $game/GenericShip/GenericShip#set:rightGun (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=64
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $~lib/util/hash/HASH<~lib/string/String> (param $0 i32) (result i32)
+  (local $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  i32.const 1
+  drop
+  block $~lib/util/hash/hashStr|inlined.0 (result i32)
+   local.get $0
+   local.set $1
+   local.get $1
+   i32.const 0
+   i32.eq
+   if
+    i32.const 0
+    br $~lib/util/hash/hashStr|inlined.0
+   end
+   local.get $1
+   call $~lib/string/String#get:length
+   i32.const 1
+   i32.shl
+   local.set $2
+   local.get $2
+   local.set $3
+   local.get $1
+   local.set $4
+   local.get $3
+   i32.const 16
+   i32.ge_u
+   if
+    i32.const 0
+    i32.const -1640531535
+    i32.add
+    i32.const -2048144777
+    i32.add
+    local.set $5
+    i32.const 0
+    i32.const -2048144777
+    i32.add
+    local.set $6
+    i32.const 0
+    local.set $7
+    i32.const 0
+    i32.const -1640531535
+    i32.sub
+    local.set $8
+    local.get $3
+    local.get $4
+    i32.add
+    i32.const 16
+    i32.sub
+    local.set $9
+    loop $while-continue|0
+     local.get $4
+     local.get $9
+     i32.le_u
+     local.set $10
+     local.get $10
+     if
+      local.get $5
+      local.set $12
+      local.get $4
+      i32.load
+      local.set $11
+      local.get $12
+      local.get $11
+      i32.const -2048144777
+      i32.mul
+      i32.add
+      i32.const 13
+      i32.rotl
+      i32.const -1640531535
+      i32.mul
+      local.set $5
+      local.get $6
+      local.set $12
+      local.get $4
+      i32.load offset=4
+      local.set $11
+      local.get $12
+      local.get $11
+      i32.const -2048144777
+      i32.mul
+      i32.add
+      i32.const 13
+      i32.rotl
+      i32.const -1640531535
+      i32.mul
+      local.set $6
+      local.get $7
+      local.set $12
+      local.get $4
+      i32.load offset=8
+      local.set $11
+      local.get $12
+      local.get $11
+      i32.const -2048144777
+      i32.mul
+      i32.add
+      i32.const 13
+      i32.rotl
+      i32.const -1640531535
+      i32.mul
+      local.set $7
+      local.get $8
+      local.set $12
+      local.get $4
+      i32.load offset=12
+      local.set $11
+      local.get $12
+      local.get $11
+      i32.const -2048144777
+      i32.mul
+      i32.add
+      i32.const 13
+      i32.rotl
+      i32.const -1640531535
+      i32.mul
+      local.set $8
+      local.get $4
+      i32.const 16
+      i32.add
+      local.set $4
+      br $while-continue|0
+     end
+    end
+    local.get $2
+    local.get $5
+    i32.const 1
+    i32.rotl
+    local.get $6
+    i32.const 7
+    i32.rotl
+    i32.add
+    local.get $7
+    i32.const 12
+    i32.rotl
+    i32.add
+    local.get $8
+    i32.const 18
+    i32.rotl
+    i32.add
+    i32.add
+    local.set $2
+   else
+    local.get $2
+    i32.const 0
+    i32.const 374761393
+    i32.add
+    i32.add
+    local.set $2
+   end
+   local.get $1
+   local.get $3
+   i32.add
+   i32.const 4
+   i32.sub
+   local.set $9
+   loop $while-continue|1
+    local.get $4
+    local.get $9
+    i32.le_u
+    local.set $8
+    local.get $8
+    if
+     local.get $2
+     local.get $4
+     i32.load
+     i32.const -1028477379
+     i32.mul
+     i32.add
+     local.set $2
+     local.get $2
+     i32.const 17
+     i32.rotl
+     i32.const 668265263
+     i32.mul
+     local.set $2
+     local.get $4
+     i32.const 4
+     i32.add
+     local.set $4
+     br $while-continue|1
+    end
+   end
+   local.get $1
+   local.get $3
+   i32.add
+   local.set $9
+   loop $while-continue|2
+    local.get $4
+    local.get $9
+    i32.lt_u
+    local.set $8
+    local.get $8
+    if
+     local.get $2
+     local.get $4
+     i32.load8_u
+     i32.const 374761393
+     i32.mul
+     i32.add
+     local.set $2
+     local.get $2
+     i32.const 11
+     i32.rotl
+     i32.const -1640531535
+     i32.mul
+     local.set $2
+     local.get $4
+     i32.const 1
+     i32.add
+     local.set $4
+     br $while-continue|2
+    end
+   end
+   local.get $2
+   local.get $2
+   i32.const 15
+   i32.shr_u
+   i32.xor
+   local.set $2
+   local.get $2
+   i32.const -2048144777
+   i32.mul
+   local.set $2
+   local.get $2
+   local.get $2
+   i32.const 13
+   i32.shr_u
+   i32.xor
+   local.set $2
+   local.get $2
+   i32.const -1028477379
+   i32.mul
+   local.set $2
+   local.get $2
+   local.get $2
+   i32.const 16
+   i32.shr_u
+   i32.xor
+   local.set $2
+   local.get $2
+  end
+  return
+ )
+ (func $~lib/string/String.__eq (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  local.get $0
+  local.get $1
+  i32.eq
+  if
+   i32.const 1
+   return
+  end
+  local.get $0
+  i32.const 0
+  i32.eq
+  if (result i32)
+   i32.const 1
+  else
+   local.get $1
+   i32.const 0
+   i32.eq
+  end
+  if
+   i32.const 0
+   return
+  end
+  local.get $0
+  call $~lib/string/String#get:length
+  local.set $2
+  local.get $2
+  local.get $1
+  call $~lib/string/String#get:length
+  i32.ne
+  if
+   i32.const 0
+   return
+  end
+  local.get $0
+  i32.const 0
+  local.get $1
+  i32.const 0
+  local.get $2
+  call $~lib/util/string/compareImpl
+  i32.eqz
+ )
+ (func $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:value (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=4
+ )
+ (func $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:key (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store
+ )
+ (func $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:taggedNext (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=8
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#rehash (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  (local $8 i32)
+  (local $9 i32)
+  (local $10 i32)
+  (local $11 i32)
+  (local $12 i32)
+  (local $13 i32)
+  (local $14 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i64.const 0
+  i64.store
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store offset=8
+  local.get $1
+  i32.const 1
+  i32.add
+  local.set $2
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $2
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 8
+  i32.mul
+  i32.const 3
+  i32.div_s
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  local.get $4
+  i32.const 12
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  local.tee $5
+  i32.store offset=4
+  local.get $0
+  i32.load offset=8
+  local.set $6
+  local.get $6
+  local.get $0
+  i32.load offset=16
+  i32.const 12
+  i32.mul
+  i32.add
+  local.set $7
+  local.get $5
+  local.set $8
+  loop $while-continue|0
+   local.get $6
+   local.get $7
+   i32.ne
+   local.set $9
+   local.get $9
+   if
+    local.get $6
+    local.set $10
+    local.get $10
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     local.get $8
+     local.set $11
+     global.get $~lib/memory/__stack_pointer
+     local.get $10
+     i32.load
+     local.tee $12
+     i32.store offset=8
+     local.get $11
+     local.get $12
+     call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:key
+     local.get $11
+     local.get $10
+     i32.load offset=4
+     call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:value
+     local.get $12
+     call $~lib/util/hash/HASH<~lib/string/String>
+     local.get $1
+     i32.and
+     local.set $13
+     local.get $3
+     local.get $13
+     i32.const 4
+     i32.mul
+     i32.add
+     local.set $14
+     local.get $11
+     local.get $14
+     i32.load
+     call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:taggedNext
+     local.get $14
+     local.get $8
+     i32.store
+     local.get $8
+     i32.const 12
+     i32.add
+     local.set $8
+    end
+    local.get $6
+    i32.const 12
+    i32.add
+    local.set $6
+    br $while-continue|0
+   end
+  end
+  local.get $0
+  local.get $3
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:buckets
+  local.get $0
+  local.get $1
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:bucketsMask
+  local.get $0
+  local.get $5
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entries
+  local.get $0
+  local.get $4
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesCapacity
+  local.get $0
+  local.get $0
+  i32.load offset=20
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesOffset
+  global.get $~lib/memory/__stack_pointer
+  i32.const 12
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $game/MultiSnake/MultiSnake#set:playerOneShip (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
   i32.store offset=16
+  local.get $0
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__link
+ )
+ (func $game/MultiSnake/MultiSnake#set:playerTwoShip (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  i32.store offset=20
   local.get $0
   local.get $1
   i32.const 0
@@ -5710,22 +6148,22 @@
  (func $game/MultiSnake/MultiSnake#set:explosionIndex (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=20
+  i32.store offset=24
  )
  (func $game/MultiSnake/MultiSnake#set:bulletIndex (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=24
+  i32.store offset=28
  )
  (func $game/MultiSnake/MultiSnake#set:bulletCoolDown (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=32
+  i32.store offset=36
  )
  (func $game/MultiSnake/MultiSnake#set:enemyBulletCoolDown (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=36
+  i32.store offset=40
  )
  (func $game/WebSocket/WebSocket#set:id (param $0 i32) (param $1 i32)
   local.get $0
@@ -5735,7 +6173,7 @@
  (func $game/MultiSnake/MultiSnake#set:socket (param $0 i32) (param $1 i32)
   local.get $0
   local.get $1
-  i32.store offset=40
+  i32.store offset=44
   local.get $0
   local.get $1
   i32.const 0
@@ -5767,8 +6205,7 @@
   i32.store8 offset=4
  )
  (func $start:game/MultiSnake
-  call $start:game/PlayerShip
-  call $start:game/EnemyShip
+  call $start:game/Ship
   i32.const 0
   call $game/MultiSnake/MultiSnake#constructor
   drop
@@ -5788,37 +6225,41 @@
   local.get $0
   i32.load offset=8
  )
- (func $game/MultiSnake/MultiSnake#get:playerShip (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:ships (param $0 i32) (result i32)
   local.get $0
   i32.load offset=12
  )
- (func $game/MultiSnake/MultiSnake#get:enemyShip (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:playerOneShip (param $0 i32) (result i32)
   local.get $0
   i32.load offset=16
  )
- (func $game/MultiSnake/MultiSnake#get:explosionIndex (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:playerTwoShip (param $0 i32) (result i32)
   local.get $0
   i32.load offset=20
  )
- (func $game/MultiSnake/MultiSnake#get:bulletIndex (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:explosionIndex (param $0 i32) (result i32)
   local.get $0
   i32.load offset=24
  )
- (func $game/MultiSnake/MultiSnake#get:enemyBulletIndex (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:bulletIndex (param $0 i32) (result i32)
   local.get $0
   i32.load offset=28
  )
- (func $game/MultiSnake/MultiSnake#get:bulletCoolDown (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:enemyBulletIndex (param $0 i32) (result i32)
   local.get $0
   i32.load offset=32
  )
- (func $game/MultiSnake/MultiSnake#get:enemyBulletCoolDown (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:bulletCoolDown (param $0 i32) (result i32)
   local.get $0
   i32.load offset=36
  )
- (func $game/MultiSnake/MultiSnake#get:socket (param $0 i32) (result i32)
+ (func $game/MultiSnake/MultiSnake#get:enemyBulletCoolDown (param $0 i32) (result i32)
   local.get $0
   i32.load offset=40
+ )
+ (func $game/MultiSnake/MultiSnake#get:socket (param $0 i32) (result i32)
+  local.get $0
+  i32.load offset=44
  )
  (func $game/MultiSnake/MultiSnake#respawnCheck (param $0 i32)
   nop
@@ -5861,19 +6302,6 @@
   i32.load offset=24
   global.get $game/webgl/COLOR_BUFFER_BIT
   call $game/webgl/clear
- )
- (func $game/PlayerShip/PlayerShip#changeDirection (param $0 i32) (param $1 i32)
-  local.get $0
-  i32.load
-  local.get $1
-  i32.ne
-  if
-   local.get $0
-   local.get $1
-   call $game/PlayerShip/PlayerShip#set:direction
-   local.get $0
-   call $game/PlayerShip/PlayerShip#shiftTrail
-  end
  )
  (func $game/Vector/Vector#multiply (param $0 i32) (param $1 f32)
   local.get $0
@@ -6097,7 +6525,7 @@
    i32.const 3
    i32.eq
    if
-    i32.const 5056
+    i32.const 5040
     i32.const 2208
     i32.const 337
     i32.const 7
@@ -6129,7 +6557,7 @@
   i32.const 3
   i32.ne
   if
-   i32.const 5120
+   i32.const 5104
    i32.const 2208
    i32.const 351
    i32.const 5
@@ -6206,40 +6634,27 @@
   end
   drop
  )
- (func $game/PlayerShip/PlayerShip#get:scaledRadius (param $0 i32) (result f32)
-  local.get $0
-  f32.load offset=20
- )
- (func $game/EnemyShip/EnemyShip#get:scaledRadius (param $0 i32) (result f32)
+ (func $game/GenericShip/GenericShip#get:scaledRadius (param $0 i32) (result f32)
   local.get $0
   f32.load offset=24
  )
  (func $game/iShip/iShip#get:scaledRadius@virtual (param $0 i32) (result f32)
   (local $1 i32)
   block $default
-   block $case1
-    block $case0
-     local.get $0
-     i32.const 8
-     i32.sub
-     i32.load
-     local.set $1
-     local.get $1
-     i32.const 29
-     i32.eq
-     br_if $case0
-     local.get $1
-     i32.const 31
-     i32.eq
-     br_if $case1
-     br $default
-    end
+   block $case0
     local.get $0
-    call $game/PlayerShip/PlayerShip#get:scaledRadius
-    return
+    i32.const 8
+    i32.sub
+    i32.load
+    local.set $1
+    local.get $1
+    i32.const 30
+    i32.eq
+    br_if $case0
+    br $default
    end
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:scaledRadius
+   call $game/GenericShip/GenericShip#get:scaledRadius
    return
   end
   unreachable
@@ -6247,29 +6662,20 @@
  (func $game/iShip/iShip#get:position@virtual (param $0 i32) (result i32)
   (local $1 i32)
   block $default
-   block $case1
-    block $case0
-     local.get $0
-     i32.const 8
-     i32.sub
-     i32.load
-     local.set $1
-     local.get $1
-     i32.const 29
-     i32.eq
-     br_if $case0
-     local.get $1
-     i32.const 31
-     i32.eq
-     br_if $case1
-     br $default
-    end
+   block $case0
     local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
-    return
+    i32.const 8
+    i32.sub
+    i32.load
+    local.set $1
+    local.get $1
+    i32.const 30
+    i32.eq
+    br_if $case0
+    br $default
    end
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    return
   end
   unreachable
@@ -6316,10 +6722,10 @@
   i32.const 2144
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 5056
+  i32.const 5040
   local.get $0
   call $~lib/rt/itcms/__visit
-  i32.const 5120
+  i32.const 5104
   local.get $0
   call $~lib/rt/itcms/__visit
   global.get $game/Renderer/V_COLOR_LINE_SHADER
@@ -6343,14 +6749,7 @@
    local.get $0
    call $~lib/rt/itcms/__visit
   end
-  global.get $game/PlayerShip/ZERO_VEC
-  local.tee $1
-  if
-   local.get $1
-   local.get $0
-   call $~lib/rt/itcms/__visit
-  end
-  global.get $game/EnemyShip/ZERO_VEC
+  global.get $game/GenericShip/ZERO_VEC
   local.tee $1
   if
    local.get $1
@@ -6751,7 +7150,15 @@
    call $~lib/rt/itcms/__visit
   end
   local.get $0
-  i32.load offset=40
+  i32.load offset=20
+  local.tee $2
+  if
+   local.get $2
+   local.get $1
+   call $~lib/rt/itcms/__visit
+  end
+  local.get $0
+  i32.load offset=44
   local.tee $2
   if
    local.get $2
@@ -6937,50 +7344,10 @@
   local.get $1
   call $~lib/array/Array<game/Bullet/Bullet>#__visit
  )
- (func $game/PlayerShip/PlayerShip~visit (param $0 i32) (param $1 i32)
+ (func $game/Ship/Ship~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
   local.get $0
-  i32.load offset=4
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=12
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=36
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=40
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=44
-  local.tee $2
-  if
-   local.get $2
-   local.get $1
-   call $~lib/rt/itcms/__visit
-  end
-  local.get $0
-  i32.load offset=48
+  i32.load
   local.tee $2
   if
    local.get $2
@@ -6988,7 +7355,7 @@
    call $~lib/rt/itcms/__visit
   end
  )
- (func $game/EnemyShip/EnemyShip~visit (param $0 i32) (param $1 i32)
+ (func $game/GenericShip/GenericShip~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
   local.get $0
   i32.load offset=12
@@ -7007,7 +7374,7 @@
    call $~lib/rt/itcms/__visit
   end
   local.get $0
-  i32.load offset=36
+  i32.load offset=52
   local.tee $2
   if
    local.get $2
@@ -7015,7 +7382,7 @@
    call $~lib/rt/itcms/__visit
   end
   local.get $0
-  i32.load offset=40
+  i32.load offset=56
   local.tee $2
   if
    local.get $2
@@ -7023,7 +7390,7 @@
    call $~lib/rt/itcms/__visit
   end
   local.get $0
-  i32.load offset=44
+  i32.load offset=60
   local.tee $2
   if
    local.get $2
@@ -7031,13 +7398,95 @@
    call $~lib/rt/itcms/__visit
   end
   local.get $0
-  i32.load offset=48
+  i32.load offset=64
   local.tee $2
   if
    local.get $2
    local.get $1
    call $~lib/rt/itcms/__visit
   end
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#__visit (param $0 i32) (param $1 i32)
+  (local $2 i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  local.get $0
+  i32.load
+  local.get $1
+  call $~lib/rt/itcms/__visit
+  local.get $0
+  i32.load offset=8
+  local.set $2
+  i32.const 1
+  if (result i32)
+   i32.const 1
+  else
+   i32.const 1
+  end
+  drop
+  local.get $2
+  local.set $3
+  local.get $3
+  local.get $0
+  i32.load offset=16
+  i32.const 12
+  i32.mul
+  i32.add
+  local.set $4
+  loop $while-continue|0
+   local.get $3
+   local.get $4
+   i32.lt_u
+   local.set $5
+   local.get $5
+   if
+    local.get $3
+    local.set $6
+    local.get $6
+    i32.load offset=8
+    i32.const 1
+    i32.and
+    i32.eqz
+    if
+     i32.const 1
+     drop
+     local.get $6
+     i32.load
+     local.set $7
+     i32.const 0
+     drop
+     local.get $7
+     local.get $1
+     call $~lib/rt/itcms/__visit
+     i32.const 1
+     drop
+     local.get $6
+     i32.load offset=4
+     local.set $7
+     i32.const 0
+     drop
+     local.get $7
+     local.get $1
+     call $~lib/rt/itcms/__visit
+    end
+    local.get $3
+    i32.const 12
+    i32.add
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  local.get $2
+  local.get $1
+  call $~lib/rt/itcms/__visit
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>~visit (param $0 i32) (param $1 i32)
+  local.get $0
+  local.get $1
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#__visit
  )
  (func $game/WebSocket/WebSocket~visit (param $0 i32) (param $1 i32)
   (local $2 i32)
@@ -7124,184 +7573,190 @@
      block $~lib/function/Function<%28~lib/string/String%29=>void>
       block $~lib/staticarray/StaticArray<~lib/string/String>
        block $game/WebSocket/WebSocket
-        block $game/EnemyShip/EnemyShip
+        block $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>
          block $game/iShip/iShip
-          block $game/PlayerShip/PlayerShip
-           block $~lib/array/Array<game/Bullet/Bullet>
-            block $game/Bullet/Bullet
-             block $~lib/array/Array<game/Explosion/Explosion>
-              block $~lib/staticarray/StaticArray<f32>
-               block $game/Explosion/Explosion
-                block $game/MultiSnake/MultiSnake
-                 block $game/Vector/Vector
-                  block $game/Renderer/Renderer
-                   block $~lib/array/Array<~lib/array/Array<bool>>
-                    block $~lib/array/Array<~lib/array/Array<~lib/string/String>>
-                     block $~lib/array/Array<~lib/array/Array<i64>>
-                      block $~lib/array/Array<~lib/array/Array<i32>>
-                       block $~lib/array/Array<bool>
-                        block $~lib/array/Array<~lib/string/String>
-                         block $~lib/array/Array<i64>
-                          block $~lib/array/Array<i32>
-                           block $~lib/typedarray/Uint64Array
-                            block $~lib/typedarray/Int64Array
-                             block $~lib/typedarray/Float64Array
-                              block $~lib/typedarray/Float32Array
-                               block $~lib/typedarray/Uint32Array
-                                block $~lib/typedarray/Int32Array
-                                 block $~lib/typedarray/Uint16Array
-                                  block $~lib/typedarray/Int16Array
-                                   block $~lib/typedarray/Uint8Array
-                                    block $~lib/typedarray/Int8Array
-                                     block $~lib/arraybuffer/ArrayBufferView
-                                      block $~lib/string/String
-                                       block $~lib/arraybuffer/ArrayBuffer
-                                        local.get $0
-                                        i32.const 8
-                                        i32.sub
-                                        i32.load
-                                        br_table $~lib/arraybuffer/ArrayBuffer $~lib/string/String $~lib/arraybuffer/ArrayBufferView $~lib/typedarray/Int8Array $~lib/typedarray/Uint8Array $~lib/typedarray/Int16Array $~lib/typedarray/Uint16Array $~lib/typedarray/Int32Array $~lib/typedarray/Uint32Array $~lib/typedarray/Float32Array $~lib/typedarray/Float64Array $~lib/typedarray/Int64Array $~lib/typedarray/Uint64Array $~lib/array/Array<i32> $~lib/array/Array<i64> $~lib/array/Array<~lib/string/String> $~lib/array/Array<bool> $~lib/array/Array<~lib/array/Array<i32>> $~lib/array/Array<~lib/array/Array<i64>> $~lib/array/Array<~lib/array/Array<~lib/string/String>> $~lib/array/Array<~lib/array/Array<bool>> $game/Renderer/Renderer $game/Vector/Vector $game/MultiSnake/MultiSnake $game/Explosion/Explosion $~lib/staticarray/StaticArray<f32> $~lib/array/Array<game/Explosion/Explosion> $game/Bullet/Bullet $~lib/array/Array<game/Bullet/Bullet> $game/PlayerShip/PlayerShip $game/iShip/iShip $game/EnemyShip/EnemyShip $game/WebSocket/WebSocket $~lib/staticarray/StaticArray<~lib/string/String> $~lib/function/Function<%28~lib/string/String%29=>void> $~lib/function/Function<%28%29=>void> $game/MultiSnake/EnemyMovementTracker $invalid
+          block $game/GenericShip/GenericShip
+           block $game/Ship/Ship
+            block $~lib/array/Array<game/Bullet/Bullet>
+             block $game/Bullet/Bullet
+              block $~lib/array/Array<game/Explosion/Explosion>
+               block $~lib/staticarray/StaticArray<f32>
+                block $game/Explosion/Explosion
+                 block $game/MultiSnake/MultiSnake
+                  block $game/Vector/Vector
+                   block $game/Renderer/Renderer
+                    block $~lib/array/Array<~lib/array/Array<bool>>
+                     block $~lib/array/Array<~lib/array/Array<~lib/string/String>>
+                      block $~lib/array/Array<~lib/array/Array<i64>>
+                       block $~lib/array/Array<~lib/array/Array<i32>>
+                        block $~lib/array/Array<bool>
+                         block $~lib/array/Array<~lib/string/String>
+                          block $~lib/array/Array<i64>
+                           block $~lib/array/Array<i32>
+                            block $~lib/typedarray/Uint64Array
+                             block $~lib/typedarray/Int64Array
+                              block $~lib/typedarray/Float64Array
+                               block $~lib/typedarray/Float32Array
+                                block $~lib/typedarray/Uint32Array
+                                 block $~lib/typedarray/Int32Array
+                                  block $~lib/typedarray/Uint16Array
+                                   block $~lib/typedarray/Int16Array
+                                    block $~lib/typedarray/Uint8Array
+                                     block $~lib/typedarray/Int8Array
+                                      block $~lib/arraybuffer/ArrayBufferView
+                                       block $~lib/string/String
+                                        block $~lib/arraybuffer/ArrayBuffer
+                                         local.get $0
+                                         i32.const 8
+                                         i32.sub
+                                         i32.load
+                                         br_table $~lib/arraybuffer/ArrayBuffer $~lib/string/String $~lib/arraybuffer/ArrayBufferView $~lib/typedarray/Int8Array $~lib/typedarray/Uint8Array $~lib/typedarray/Int16Array $~lib/typedarray/Uint16Array $~lib/typedarray/Int32Array $~lib/typedarray/Uint32Array $~lib/typedarray/Float32Array $~lib/typedarray/Float64Array $~lib/typedarray/Int64Array $~lib/typedarray/Uint64Array $~lib/array/Array<i32> $~lib/array/Array<i64> $~lib/array/Array<~lib/string/String> $~lib/array/Array<bool> $~lib/array/Array<~lib/array/Array<i32>> $~lib/array/Array<~lib/array/Array<i64>> $~lib/array/Array<~lib/array/Array<~lib/string/String>> $~lib/array/Array<~lib/array/Array<bool>> $game/Renderer/Renderer $game/Vector/Vector $game/MultiSnake/MultiSnake $game/Explosion/Explosion $~lib/staticarray/StaticArray<f32> $~lib/array/Array<game/Explosion/Explosion> $game/Bullet/Bullet $~lib/array/Array<game/Bullet/Bullet> $game/Ship/Ship $game/GenericShip/GenericShip $game/iShip/iShip $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip> $game/WebSocket/WebSocket $~lib/staticarray/StaticArray<~lib/string/String> $~lib/function/Function<%28~lib/string/String%29=>void> $~lib/function/Function<%28%29=>void> $game/MultiSnake/EnemyMovementTracker $invalid
+                                        end
+                                        return
                                        end
                                        return
                                       end
+                                      local.get $0
+                                      local.get $1
+                                      call $~lib/arraybuffer/ArrayBufferView~visit
                                       return
                                      end
                                      local.get $0
                                      local.get $1
-                                     call $~lib/arraybuffer/ArrayBufferView~visit
+                                     call $~lib/typedarray/Int8Array~visit
                                      return
                                     end
                                     local.get $0
                                     local.get $1
-                                    call $~lib/typedarray/Int8Array~visit
+                                    call $~lib/typedarray/Uint8Array~visit
                                     return
                                    end
                                    local.get $0
                                    local.get $1
-                                   call $~lib/typedarray/Uint8Array~visit
+                                   call $~lib/typedarray/Int16Array~visit
                                    return
                                   end
                                   local.get $0
                                   local.get $1
-                                  call $~lib/typedarray/Int16Array~visit
+                                  call $~lib/typedarray/Uint16Array~visit
                                   return
                                  end
                                  local.get $0
                                  local.get $1
-                                 call $~lib/typedarray/Uint16Array~visit
+                                 call $~lib/typedarray/Int32Array~visit
                                  return
                                 end
                                 local.get $0
                                 local.get $1
-                                call $~lib/typedarray/Int32Array~visit
+                                call $~lib/typedarray/Uint32Array~visit
                                 return
                                end
                                local.get $0
                                local.get $1
-                               call $~lib/typedarray/Uint32Array~visit
+                               call $~lib/typedarray/Float32Array~visit
                                return
                               end
                               local.get $0
                               local.get $1
-                              call $~lib/typedarray/Float32Array~visit
+                              call $~lib/typedarray/Float64Array~visit
                               return
                              end
                              local.get $0
                              local.get $1
-                             call $~lib/typedarray/Float64Array~visit
+                             call $~lib/typedarray/Int64Array~visit
                              return
                             end
                             local.get $0
                             local.get $1
-                            call $~lib/typedarray/Int64Array~visit
+                            call $~lib/typedarray/Uint64Array~visit
                             return
                            end
                            local.get $0
                            local.get $1
-                           call $~lib/typedarray/Uint64Array~visit
+                           call $~lib/array/Array<i32>~visit
                            return
                           end
                           local.get $0
                           local.get $1
-                          call $~lib/array/Array<i32>~visit
+                          call $~lib/array/Array<i64>~visit
                           return
                          end
                          local.get $0
                          local.get $1
-                         call $~lib/array/Array<i64>~visit
+                         call $~lib/array/Array<~lib/string/String>~visit
                          return
                         end
                         local.get $0
                         local.get $1
-                        call $~lib/array/Array<~lib/string/String>~visit
+                        call $~lib/array/Array<bool>~visit
                         return
                        end
                        local.get $0
                        local.get $1
-                       call $~lib/array/Array<bool>~visit
+                       call $~lib/array/Array<~lib/array/Array<i32>>~visit
                        return
                       end
                       local.get $0
                       local.get $1
-                      call $~lib/array/Array<~lib/array/Array<i32>>~visit
+                      call $~lib/array/Array<~lib/array/Array<i64>>~visit
                       return
                      end
                      local.get $0
                      local.get $1
-                     call $~lib/array/Array<~lib/array/Array<i64>>~visit
+                     call $~lib/array/Array<~lib/array/Array<~lib/string/String>>~visit
                      return
                     end
                     local.get $0
                     local.get $1
-                    call $~lib/array/Array<~lib/array/Array<~lib/string/String>>~visit
+                    call $~lib/array/Array<~lib/array/Array<bool>>~visit
                     return
                    end
-                   local.get $0
-                   local.get $1
-                   call $~lib/array/Array<~lib/array/Array<bool>>~visit
                    return
                   end
                   return
                  end
+                 local.get $0
+                 local.get $1
+                 call $game/MultiSnake/MultiSnake~visit
                  return
                 end
                 local.get $0
                 local.get $1
-                call $game/MultiSnake/MultiSnake~visit
+                call $game/Explosion/Explosion~visit
                 return
                end
-               local.get $0
-               local.get $1
-               call $game/Explosion/Explosion~visit
                return
               end
+              local.get $0
+              local.get $1
+              call $~lib/array/Array<game/Explosion/Explosion>~visit
               return
              end
              local.get $0
              local.get $1
-             call $~lib/array/Array<game/Explosion/Explosion>~visit
+             call $game/Bullet/Bullet~visit
              return
             end
             local.get $0
             local.get $1
-            call $game/Bullet/Bullet~visit
+            call $~lib/array/Array<game/Bullet/Bullet>~visit
             return
            end
            local.get $0
            local.get $1
-           call $~lib/array/Array<game/Bullet/Bullet>~visit
+           call $game/Ship/Ship~visit
            return
           end
           local.get $0
           local.get $1
-          call $game/PlayerShip/PlayerShip~visit
+          call $game/GenericShip/GenericShip~visit
           return
          end
          return
         end
         local.get $0
         local.get $1
-        call $game/EnemyShip/EnemyShip~visit
+        call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>~visit
         return
        end
        local.get $0
@@ -8096,12 +8551,12 @@
   local.set $1
   local.get $0
   local.get $0
-  i32.load offset=28
+  i32.load offset=32
   i32.const 1
   i32.add
   call $game/MultiSnake/MultiSnake#set:enemyBulletIndex
   local.get $0
-  i32.load offset=28
+  i32.load offset=32
   local.get $0
   i32.load offset=8
   local.set $4
@@ -8125,7 +8580,7 @@
    i32.store
    local.get $4
    local.get $0
-   i32.load offset=24
+   i32.load offset=28
    call $~lib/array/Array<game/Bullet/Bullet>#__get
    i32.load8_u offset=32
    i32.const 0
@@ -8137,12 +8592,12 @@
    if
     local.get $0
     local.get $0
-    i32.load offset=28
+    i32.load offset=32
     i32.const 1
     i32.add
     call $game/MultiSnake/MultiSnake#set:enemyBulletIndex
     local.get $0
-    i32.load offset=28
+    i32.load offset=32
     local.get $0
     i32.load offset=8
     local.set $4
@@ -8190,7 +8645,7 @@
   i32.store offset=4
   local.get $4
   local.get $0
-  i32.load offset=24
+  i32.load offset=28
   call $~lib/array/Array<game/Bullet/Bullet>#__get
   local.set $4
   global.get $~lib/memory/__stack_pointer
@@ -8198,16 +8653,16 @@
   i32.store
   local.get $4
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=16
+  i32.load offset=20
   i32.load
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=16
+  i32.load offset=20
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
   i32.store offset=4
   local.get $4
-  call $game/EnemyShip/EnemyShip#get:position
+  call $game/GenericShip/GenericShip#get:position
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
@@ -8219,7 +8674,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $game/EnemyShip/EnemyShip#shiftTrail (param $0 i32)
+ (func $game/GenericShip/GenericShip#shiftTrail (param $0 i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -8310,7 +8765,7 @@
   (local $4 i32)
   (local $5 i32)
   global.get $~lib/memory/__stack_pointer
-  i32.const 40
+  i32.const 28
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
@@ -8324,11 +8779,8 @@
   i64.const 0
   i64.store offset=16
   global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store offset=24
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store offset=32
+  i32.const 0
+  i32.store offset=24
   global.get $~lib/memory/__stack_pointer
   local.get $0
   i32.const 3856
@@ -8347,44 +8799,6 @@
   call $~lib/array/Array<~lib/string/String>#__get
   local.tee $2
   i32.store offset=8
-  i32.const 4016
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=28
-  local.get $5
-  local.get $2
-  call $~lib/string/String.__concat
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=20
-  local.get $5
-  i32.const 4048
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=24
-  local.get $5
-  call $~lib/string/String.__concat
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store
-  local.get $5
-  global.get $game/MultiSnake/username
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=16
-  local.get $5
-  call $~lib/string/String.__concat
-  local.set $5
-  global.get $~lib/memory/__stack_pointer
-  local.get $5
-  i32.store offset=12
-  local.get $5
-  call $game/MultiSnake/log
   local.get $2
   global.get $game/MultiSnake/username
   local.set $5
@@ -8401,8 +8815,8 @@
    i32.const 2
    call $~lib/array/Array<~lib/string/String>#__get
    local.tee $3
-   i32.store offset=32
-   i32.const 4080
+   i32.store offset=12
+   i32.const 4016
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
@@ -8413,38 +8827,38 @@
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
-   i32.store offset=12
+   i32.store offset=16
    local.get $5
    call $game/MultiSnake/log
    local.get $3
    call $~lib/string/String.__not
    if
     global.get $~lib/memory/__stack_pointer
-    i32.const 40
+    i32.const 28
     i32.add
     global.set $~lib/memory/__stack_pointer
     return
    end
    global.get $~lib/memory/__stack_pointer
    local.get $3
-   i32.const 4128
+   i32.const 4064
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
-   i32.store offset=16
+   i32.store offset=20
    local.get $5
    global.get $~lib/builtins/i32.MAX_VALUE
    call $~lib/string/String#split
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
-   i32.store offset=12
+   i32.store offset=16
    local.get $5
    i32.const 1
    call $~lib/array/Array<~lib/string/String>#__get
    local.tee $4
-   i32.store offset=36
-   i32.const 4160
+   i32.store offset=24
+   i32.const 4096
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
@@ -8455,11 +8869,11 @@
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
-   i32.store offset=12
+   i32.store offset=16
    local.get $5
    call $game/MultiSnake/log
    local.get $4
-   i32.const 4208
+   i32.const 4144
    local.set $5
    global.get $~lib/memory/__stack_pointer
    local.get $5
@@ -8468,42 +8882,94 @@
    i32.const 0
    call $~lib/string/String#startsWith
    if
-    i32.const 4240
+    i32.const 4176
     local.set $5
     global.get $~lib/memory/__stack_pointer
     local.get $5
-    i32.store offset=12
+    i32.store offset=16
     local.get $5
     call $game/MultiSnake/log
     global.get $game/MultiSnake/MultiSnake.SN
     local.set $5
     global.get $~lib/memory/__stack_pointer
     local.get $5
-    i32.store offset=12
+    i32.store offset=16
     local.get $5
     call $game/MultiSnake/MultiSnake#launchEnemyBullet
     call $game/MultiSnake/playEnemyLaser
    end
    local.get $4
-   i32.const 4208
-   i32.ne
+   i32.const 4256
+   local.set $5
+   global.get $~lib/memory/__stack_pointer
+   local.get $5
+   i32.store
+   local.get $5
+   i32.const 0
+   call $~lib/string/String#startsWith
    if
     global.get $game/MultiSnake/MultiSnake.SN
-    i32.load offset=16
+    i32.load offset=20
+    i32.load8_u offset=4
+    i32.const 0
+    i32.ne
+    i32.const 1
+    i32.eq
+    if
+     call $game/MultiSnake/playCloakOff
+     global.get $game/MultiSnake/MultiSnake.SN
+     i32.load offset=20
+     i32.const 0
+     call $game/GenericShip/GenericShip#set:visible
+     i32.const 4288
+     local.set $5
+     global.get $~lib/memory/__stack_pointer
+     local.get $5
+     i32.store offset=16
+     local.get $5
+     call $game/MultiSnake/log
+    else
+     call $game/MultiSnake/playCloakOn
+     global.get $game/MultiSnake/MultiSnake.SN
+     i32.load offset=20
+     i32.const 1
+     call $game/GenericShip/GenericShip#set:visible
+     i32.const 4336
+     local.set $5
+     global.get $~lib/memory/__stack_pointer
+     local.get $5
+     i32.store offset=16
+     local.get $5
+     call $game/MultiSnake/log
+    end
+   end
+   local.get $4
+   i32.const 4144
+   i32.ne
+   if (result i32)
+    local.get $4
+    i32.const 4256
+    i32.ne
+   else
+    i32.const 0
+   end
+   if
+    global.get $game/MultiSnake/MultiSnake.SN
+    i32.load offset=20
     local.set $5
     global.get $~lib/memory/__stack_pointer
     local.get $5
-    i32.store offset=12
+    i32.store offset=16
     local.get $5
     local.get $4
     i32.const 0
     call $~lib/string/parseInt
     i32.trunc_f64_s
-    call $game/EnemyShip/EnemyShip#changeDirection
+    call $game/GenericShip/GenericShip#changeDirection
    end
   end
   global.get $~lib/memory/__stack_pointer
-  i32.const 40
+  i32.const 28
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
@@ -8537,7 +9003,7 @@
   call $game/MultiSnake/promptRoom
   global.set $game/MultiSnake/room
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=40
+  i32.load offset=44
   local.set $0
   global.get $~lib/memory/__stack_pointer
   local.get $0
@@ -8551,7 +9017,7 @@
   local.get $0
   call $game/WebSocket/WebSocket#registerUsername
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=40
+  i32.load offset=44
   local.set $0
   global.get $~lib/memory/__stack_pointer
   local.get $0
@@ -8563,7 +9029,7 @@
   local.get $0
   i32.store offset=4
   local.get $0
-  i32.const 4384
+  i32.const 4448
   local.set $0
   global.get $~lib/memory/__stack_pointer
   local.get $0
@@ -8575,7 +9041,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $game/PlayerShip/PlayerShip#constructor (param $0 i32) (result i32)
+ (func $game/GenericShip/GenericShip#constructor (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
@@ -8591,70 +9057,82 @@
   i32.eqz
   if
    global.get $~lib/memory/__stack_pointer
-   i32.const 52
-   i32.const 29
+   i32.const 68
+   i32.const 30
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
   end
   local.get $0
   global.get $game/iShip/DIRECTION.DOWN
-  call $game/PlayerShip/PlayerShip#set:direction
+  call $game/GenericShip/GenericShip#set:direction
+  local.get $0
+  i32.const 1
+  call $game/GenericShip/GenericShip#set:visible
+  local.get $0
+  f32.const 0
+  call $game/GenericShip/GenericShip#set:_rotation
   local.get $0
   i32.const 0
-  f32.const -0.5
+  f32.const 0
   f32.const 0
   call $game/Vector/Vector#constructor
-  call $game/PlayerShip/PlayerShip#set:_position
-  local.get $0
-  f32.const 0
-  call $game/PlayerShip/PlayerShip#set:_rotation
+  call $game/GenericShip/GenericShip#set:_position
   local.get $0
   i32.const 0
   global.get $game/iShip/MAX_TRAIL_LEN
   i32.const 2
   i32.mul
   call $~lib/staticarray/StaticArray<f32>#constructor
-  call $game/PlayerShip/PlayerShip#set:trail
+  call $game/GenericShip/GenericShip#set:trail
   local.get $0
   f32.const 0
-  call $game/PlayerShip/PlayerShip#set:lastTrailDist
+  call $game/GenericShip/GenericShip#set:lastTrailDist
   local.get $0
   f32.const 0.05000000074505806
-  call $game/PlayerShip/PlayerShip#set:_scaledRadius
+  call $game/GenericShip/GenericShip#set:_scaledRadius
   local.get $0
   f32.const 2.4999999441206455e-03
-  call $game/PlayerShip/PlayerShip#set:_scaledRadiusSQ
+  call $game/GenericShip/GenericShip#set:_scaledRadiusSQ
   local.get $0
-  i32.const 1
-  call $game/PlayerShip/PlayerShip#set:visible
+  i32.const -16776961
+  call $game/GenericShip/GenericShip#set:trailColor
+  local.get $0
+  i32.const -16776961
+  call $game/GenericShip/GenericShip#set:shipColor
+  local.get $0
+  i32.const 16777215
+  call $game/GenericShip/GenericShip#set:cockpitColor
+  local.get $0
+  i32.const -16776961
+  call $game/GenericShip/GenericShip#set:gunColor
   local.get $0
   f32.const 0.05000000074505806
-  call $game/PlayerShip/PlayerShip#set:scale
+  call $game/GenericShip/GenericShip#set:scale
   local.get $0
   i32.const 56
   i32.const 25
-  i32.const 4448
+  i32.const 4640
   call $~lib/rt/__newBuffer
-  call $game/PlayerShip/PlayerShip#set:shipBody
+  call $game/GenericShip/GenericShip#set:shipBody
   local.get $0
   i32.const 32
   i32.const 25
-  i32.const 4528
+  i32.const 4720
   call $~lib/rt/__newBuffer
-  call $game/PlayerShip/PlayerShip#set:shipCockpit
+  call $game/GenericShip/GenericShip#set:shipCockpit
   local.get $0
   i32.const 32
   i32.const 25
-  i32.const 4592
+  i32.const 4784
   call $~lib/rt/__newBuffer
-  call $game/PlayerShip/PlayerShip#set:leftGun
+  call $game/GenericShip/GenericShip#set:leftGun
   local.get $0
   i32.const 32
   i32.const 25
-  i32.const 4656
+  i32.const 4848
   call $~lib/rt/__newBuffer
-  call $game/PlayerShip/PlayerShip#set:rightGun
+  call $game/GenericShip/GenericShip#set:rightGun
   i32.const 0
   local.set $1
   loop $for-loop|0
@@ -8667,7 +9145,7 @@
    local.get $2
    if
     local.get $0
-    i32.load offset=12
+    i32.load offset=16
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
@@ -8675,11 +9153,11 @@
     local.get $3
     local.get $1
     local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     f32.load
     call $~lib/staticarray/StaticArray<f32>#__set
     local.get $0
-    i32.load offset=12
+    i32.load offset=16
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
@@ -8689,7 +9167,7 @@
     i32.const 1
     i32.add
     local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     f32.load offset=4
     call $~lib/staticarray/StaticArray<f32>#__set
     local.get $1
@@ -8707,10 +9185,85 @@
   global.set $~lib/memory/__stack_pointer
   local.get $3
  )
- (func $game/EnemyShip/EnemyShip#constructor (param $0 i32) (result i32)
-  (local $1 i32)
-  (local $2 i32)
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#find (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.load
+  local.get $2
+  local.get $0
+  i32.load offset=4
+  i32.and
+  i32.const 4
+  i32.mul
+  i32.add
+  i32.load
+  local.set $3
+  loop $while-continue|0
+   local.get $3
+   local.set $4
+   local.get $4
+   if
+    local.get $3
+    i32.load offset=8
+    local.set $5
+    local.get $5
+    i32.const 1
+    i32.and
+    i32.eqz
+    if (result i32)
+     local.get $3
+     i32.load
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     local.get $6
+     i32.store
+     local.get $6
+     local.get $1
+     call $~lib/string/String.__eq
+    else
+     i32.const 0
+    end
+    if
+     local.get $3
+     local.set $6
+     global.get $~lib/memory/__stack_pointer
+     i32.const 4
+     i32.add
+     global.set $~lib/memory/__stack_pointer
+     local.get $6
+     return
+    end
+    local.get $5
+    i32.const 1
+    i32.const -1
+    i32.xor
+    i32.and
+    local.set $3
+    br $while-continue|0
+   end
+  end
+  i32.const 0
+  local.set $6
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $6
+ )
+ (func $game/Ship/Ship#addShip (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.sub
@@ -8719,132 +9272,53 @@
   global.get $~lib/memory/__stack_pointer
   i64.const 0
   i64.store
-  local.get $0
-  i32.eqz
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  call $game/GenericShip/GenericShip#constructor
+  local.tee $3
+  i32.store
+  local.get $2
+  i32.const 4608
+  i32.eq
   if
-   global.get $~lib/memory/__stack_pointer
-   i32.const 52
-   i32.const 31
-   call $~lib/rt/itcms/__new
-   local.tee $0
-   i32.store
+   local.get $3
+   i32.const 16711935
+   call $game/GenericShip/GenericShip#set:shipColor
+   local.get $3
+   i32.const 16777215
+   call $game/GenericShip/GenericShip#set:cockpitColor
+   local.get $3
+   i32.const -1593835265
+   call $game/GenericShip/GenericShip#set:gunColor
+   local.get $3
+   i32.const 16711935
+   call $game/GenericShip/GenericShip#set:trailColor
   end
   local.get $0
-  global.get $game/iShip/DIRECTION.DOWN
-  call $game/EnemyShip/EnemyShip#set:direction
-  local.get $0
-  i32.const 1
-  call $game/EnemyShip/EnemyShip#set:visible
-  local.get $0
-  f32.const 0
-  call $game/EnemyShip/EnemyShip#set:_rotation
-  local.get $0
-  i32.const 0
-  f32.const 0.5
-  f32.const 0
-  call $game/Vector/Vector#constructor
-  call $game/EnemyShip/EnemyShip#set:_position
-  local.get $0
-  i32.const 0
-  global.get $game/iShip/MAX_TRAIL_LEN
-  i32.const 2
-  i32.mul
-  call $~lib/staticarray/StaticArray<f32>#constructor
-  call $game/EnemyShip/EnemyShip#set:trail
-  local.get $0
-  f32.const 0
-  call $game/EnemyShip/EnemyShip#set:lastTrailDist
-  local.get $0
-  f32.const 0.05000000074505806
-  call $game/EnemyShip/EnemyShip#set:_scaledRadius
-  local.get $0
-  f32.const 2.4999999441206455e-03
-  call $game/EnemyShip/EnemyShip#set:_scaledRadiusSQ
-  local.get $0
-  f32.const 0.05000000074505806
-  call $game/EnemyShip/EnemyShip#set:scale
-  local.get $0
-  i32.const 56
-  i32.const 25
-  i32.const 4720
-  call $~lib/rt/__newBuffer
-  call $game/EnemyShip/EnemyShip#set:shipBody
-  local.get $0
-  i32.const 32
-  i32.const 25
-  i32.const 4800
-  call $~lib/rt/__newBuffer
-  call $game/EnemyShip/EnemyShip#set:shipCockpit
-  local.get $0
-  i32.const 32
-  i32.const 25
-  i32.const 4864
-  call $~lib/rt/__newBuffer
-  call $game/EnemyShip/EnemyShip#set:leftGun
-  local.get $0
-  i32.const 32
-  i32.const 25
-  i32.const 4928
-  call $~lib/rt/__newBuffer
-  call $game/EnemyShip/EnemyShip#set:rightGun
-  i32.const 0
-  local.set $1
-  loop $for-loop|0
-   local.get $1
-   global.get $game/iShip/MAX_TRAIL_LEN
-   i32.const 2
-   i32.mul
-   i32.lt_s
-   local.set $2
-   local.get $2
-   if
-    local.get $0
-    i32.load offset=16
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store offset=4
-    local.get $3
-    local.get $1
-    local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
-    f32.load
-    call $~lib/staticarray/StaticArray<f32>#__set
-    local.get $0
-    i32.load offset=16
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store offset=4
-    local.get $3
-    local.get $1
-    i32.const 1
-    i32.add
-    local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
-    f32.load offset=4
-    call $~lib/staticarray/StaticArray<f32>#__set
-    local.get $1
-    i32.const 2
-    i32.add
-    local.set $1
-    br $for-loop|0
-   end
-  end
-  local.get $0
-  local.set $3
+  i32.load
+  local.set $4
+  global.get $~lib/memory/__stack_pointer
+  local.get $4
+  i32.store offset=4
+  local.get $4
+  local.get $1
+  local.get $3
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set
+  drop
+  local.get $3
+  local.set $4
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.add
   global.set $~lib/memory/__stack_pointer
-  local.get $3
+  local.get $4
  )
  (func $game/MultiSnake/MultiSnake#constructor (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
   global.get $~lib/memory/__stack_pointer
-  i32.const 12
+  i32.const 16
   i32.sub
   global.set $~lib/memory/__stack_pointer
   call $~stack_check
@@ -8852,13 +9326,13 @@
   i64.const 0
   i64.store
   global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
+  i64.const 0
+  i64.store offset=8
   local.get $0
   i32.eqz
   if
    global.get $~lib/memory/__stack_pointer
-   i32.const 44
+   i32.const 48
    i32.const 23
    call $~lib/rt/itcms/__new
    local.tee $0
@@ -8881,12 +9355,52 @@
   call $game/MultiSnake/MultiSnake#set:enemyBulletArray
   local.get $0
   i32.const 0
-  call $game/PlayerShip/PlayerShip#constructor
-  call $game/MultiSnake/MultiSnake#set:playerShip
+  call $game/Ship/Ship#constructor
+  call $game/MultiSnake/MultiSnake#set:ships
   local.get $0
-  i32.const 0
-  call $game/EnemyShip/EnemyShip#constructor
-  call $game/MultiSnake/MultiSnake#set:enemyShip
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  i32.const 4576
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  i32.const 4608
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=12
+  local.get $3
+  call $game/Ship/Ship#addShip
+  call $game/MultiSnake/MultiSnake#set:playerOneShip
+  local.get $0
+  local.get $0
+  i32.load offset=12
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=4
+  local.get $3
+  i32.const 4912
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=8
+  local.get $3
+  i32.const 4944
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  local.get $3
+  i32.store offset=12
+  local.get $3
+  call $game/Ship/Ship#addShip
+  call $game/MultiSnake/MultiSnake#set:playerTwoShip
   local.get $0
   i32.const 0
   call $game/MultiSnake/MultiSnake#set:explosionIndex
@@ -8904,11 +9418,11 @@
   call $game/MultiSnake/MultiSnake#set:enemyBulletCoolDown
   local.get $0
   i32.const 0
-  i32.const 4992
+  i32.const 4976
   local.set $3
   global.get $~lib/memory/__stack_pointer
   local.get $3
-  i32.store offset=4
+  i32.store offset=8
   local.get $3
   call $game/WebSocket/WebSocket#constructor
   call $game/MultiSnake/MultiSnake#set:socket
@@ -8936,14 +9450,14 @@
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
-    i32.store offset=8
+    i32.store offset=4
     local.get $3
     i32.const 0
     call $game/Explosion/Explosion#constructor
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
-    i32.store offset=4
+    i32.store offset=8
     local.get $3
     call $~lib/array/Array<game/Explosion/Explosion>#push
     drop
@@ -8968,14 +9482,14 @@
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
-    i32.store offset=8
+    i32.store offset=4
     local.get $3
     i32.const 0
     call $game/Bullet/Bullet#constructor
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
-    i32.store offset=4
+    i32.store offset=8
     local.get $3
     call $~lib/array/Array<game/Bullet/Bullet>#push
     drop
@@ -9000,14 +9514,14 @@
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
-    i32.store offset=8
+    i32.store offset=4
     local.get $3
     i32.const 0
     call $game/Bullet/Bullet#constructor
     local.set $3
     global.get $~lib/memory/__stack_pointer
     local.get $3
-    i32.store offset=4
+    i32.store offset=8
     local.get $3
     call $~lib/array/Array<game/Bullet/Bullet>#push
     drop
@@ -9018,18 +9532,18 @@
     br $for-loop|2
    end
   end
-  i32.const 4416
+  i32.const 4480
   local.set $3
   global.get $~lib/memory/__stack_pointer
   local.get $3
-  i32.store offset=8
+  i32.store offset=4
   local.get $3
   i32.const 500
   call $game/MultiSnake/setTimeout
   local.get $0
   local.set $3
   global.get $~lib/memory/__stack_pointer
-  i32.const 12
+  i32.const 16
   i32.add
   global.set $~lib/memory/__stack_pointer
   local.get $3
@@ -9051,12 +9565,12 @@
   local.set $3
   local.get $0
   local.get $0
-  i32.load offset=20
+  i32.load offset=24
   i32.const 1
   i32.add
   call $game/MultiSnake/MultiSnake#set:explosionIndex
   local.get $0
-  i32.load offset=20
+  i32.load offset=24
   local.get $0
   i32.load
   local.set $6
@@ -9080,7 +9594,7 @@
    i32.store
    local.get $6
    local.get $0
-   i32.load offset=20
+   i32.load offset=24
    call $~lib/array/Array<game/Explosion/Explosion>#__get
    i32.load8_u offset=24
    i32.const 0
@@ -9092,12 +9606,12 @@
    if
     local.get $0
     local.get $0
-    i32.load offset=20
+    i32.load offset=24
     i32.const 1
     i32.add
     call $game/MultiSnake/MultiSnake#set:explosionIndex
     local.get $0
-    i32.load offset=20
+    i32.load offset=24
     local.get $0
     i32.load
     local.set $6
@@ -9145,7 +9659,7 @@
   i32.store offset=4
   local.get $6
   local.get $0
-  i32.load offset=20
+  i32.load offset=24
   call $~lib/array/Array<game/Explosion/Explosion>#__get
   local.set $6
   global.get $~lib/memory/__stack_pointer
@@ -9177,12 +9691,12 @@
   local.set $1
   local.get $0
   local.get $0
-  i32.load offset=24
+  i32.load offset=28
   i32.const 1
   i32.add
   call $game/MultiSnake/MultiSnake#set:bulletIndex
   local.get $0
-  i32.load offset=24
+  i32.load offset=28
   local.get $0
   i32.load offset=4
   local.set $4
@@ -9206,7 +9720,7 @@
    i32.store
    local.get $4
    local.get $0
-   i32.load offset=24
+   i32.load offset=28
    call $~lib/array/Array<game/Bullet/Bullet>#__get
    i32.load8_u offset=32
    i32.const 0
@@ -9218,12 +9732,12 @@
    if
     local.get $0
     local.get $0
-    i32.load offset=24
+    i32.load offset=28
     i32.const 1
     i32.add
     call $game/MultiSnake/MultiSnake#set:bulletIndex
     local.get $0
-    i32.load offset=24
+    i32.load offset=28
     local.get $0
     i32.load offset=4
     local.set $4
@@ -9271,7 +9785,7 @@
   i32.store offset=4
   local.get $4
   local.get $0
-  i32.load offset=24
+  i32.load offset=28
   call $~lib/array/Array<game/Bullet/Bullet>#__get
   local.set $4
   global.get $~lib/memory/__stack_pointer
@@ -9279,106 +9793,22 @@
   i32.store
   local.get $4
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=12
+  i32.load offset=16
   i32.load
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=12
+  i32.load offset=16
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
   i32.store offset=4
   local.get $4
-  call $game/PlayerShip/PlayerShip#get:position
+  call $game/GenericShip/GenericShip#get:position
   local.set $4
   global.get $~lib/memory/__stack_pointer
   local.get $4
   i32.store offset=4
   local.get $4
   call $game/Bullet/Bullet#launch
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $game/PlayerShip/PlayerShip#shiftTrail (param $0 i32)
-  (local $1 i32)
-  (local $2 i32)
-  (local $3 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 8
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  local.get $0
-  i32.load offset=12
-  local.set $3
-  global.get $~lib/memory/__stack_pointer
-  local.get $3
-  i32.store
-  local.get $3
-  call $~lib/staticarray/StaticArray<f32>#get:length
-  i32.const 4
-  i32.sub
-  local.set $1
-  loop $for-loop|0
-   local.get $1
-   i32.const 0
-   i32.ge_s
-   local.set $2
-   local.get $2
-   if
-    local.get $0
-    i32.load offset=12
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store
-    local.get $3
-    local.get $1
-    i32.const 2
-    i32.add
-    local.get $0
-    i32.load offset=12
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store offset=4
-    local.get $3
-    local.get $1
-    call $~lib/staticarray/StaticArray<f32>#__get
-    call $~lib/staticarray/StaticArray<f32>#__set
-    local.get $0
-    i32.load offset=12
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store
-    local.get $3
-    local.get $1
-    i32.const 3
-    i32.add
-    local.get $0
-    i32.load offset=12
-    local.set $3
-    global.get $~lib/memory/__stack_pointer
-    local.get $3
-    i32.store offset=4
-    local.get $3
-    local.get $1
-    i32.const 1
-    i32.add
-    call $~lib/staticarray/StaticArray<f32>#__get
-    call $~lib/staticarray/StaticArray<f32>#__set
-    local.get $1
-    i32.const 2
-    i32.sub
-    local.set $1
-    br $for-loop|0
-   end
-  end
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.add
@@ -9591,7 +10021,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $game/EnemyShip/EnemyShip#explode (param $0 i32)
+ (func $game/GenericShip/GenericShip#explode (param $0 i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
@@ -9603,7 +10033,7 @@
   i32.store
   local.get $0
   i32.const 0
-  call $game/EnemyShip/EnemyShip#set:visible
+  call $game/GenericShip/GenericShip#set:visible
   global.get $game/MultiSnake/MultiSnake.SN
   local.set $1
   global.get $~lib/memory/__stack_pointer
@@ -9611,41 +10041,10 @@
   i32.store
   local.get $1
   local.get $0
-  call $game/EnemyShip/EnemyShip#get:position
+  call $game/GenericShip/GenericShip#get:position
   f32.load
   local.get $0
-  call $game/EnemyShip/EnemyShip#get:position
-  f32.load offset=4
-  call $game/MultiSnake/MultiSnake#activateExplosion
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $game/PlayerShip/PlayerShip#explode (param $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.const 0
-  call $game/PlayerShip/PlayerShip#set:visible
-  global.get $game/MultiSnake/MultiSnake.SN
-  local.set $1
-  global.get $~lib/memory/__stack_pointer
-  local.get $1
-  i32.store
-  local.get $1
-  local.get $0
-  call $game/PlayerShip/PlayerShip#get:position
-  f32.load
-  local.get $0
-  call $game/PlayerShip/PlayerShip#get:position
+  call $game/GenericShip/GenericShip#get:position
   f32.load offset=4
   call $game/MultiSnake/MultiSnake#activateExplosion
   global.get $~lib/memory/__stack_pointer
@@ -9862,7 +10261,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $game/PlayerShip/PlayerShip#move (param $0 i32)
+ (func $game/GenericShip/GenericShip#move (param $0 i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
@@ -9878,358 +10277,9 @@
   i32.eq
   if
    local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   f32.load offset=4
-   global.get $game/iShip/VELOCITY
-   f32.add
-   call $game/Vector/Vector#set:y
-   local.get $0
-   i32.load offset=12
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store
-   local.get $1
-   i32.const 1
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   f32.load offset=4
-   call $~lib/staticarray/StaticArray<f32>#__set
-   local.get $0
-   f32.const 3.141590118408203
-   call $game/PlayerShip/PlayerShip#set:_rotation
-  else
-   local.get $0
-   i32.load
-   global.get $game/iShip/DIRECTION.DOWN
-   i32.eq
-   if
-    local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
-    local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
-    f32.load offset=4
-    global.get $game/iShip/VELOCITY
-    f32.sub
-    call $game/Vector/Vector#set:y
-    local.get $0
-    i32.load offset=12
-    local.set $1
-    global.get $~lib/memory/__stack_pointer
-    local.get $1
-    i32.store
-    local.get $1
-    i32.const 1
-    local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
-    f32.load offset=4
-    call $~lib/staticarray/StaticArray<f32>#__set
-    local.get $0
-    f32.const 0
-    call $game/PlayerShip/PlayerShip#set:_rotation
-   else
-    local.get $0
-    i32.load
-    global.get $game/iShip/DIRECTION.LEFT
-    i32.eq
-    if
-     local.get $0
-     call $game/PlayerShip/PlayerShip#get:position
-     local.get $0
-     call $game/PlayerShip/PlayerShip#get:position
-     f32.load
-     global.get $game/iShip/VELOCITY
-     f32.sub
-     call $game/Vector/Vector#set:x
-     local.get $0
-     i32.load offset=12
-     local.set $1
-     global.get $~lib/memory/__stack_pointer
-     local.get $1
-     i32.store
-     local.get $1
-     i32.const 0
-     local.get $0
-     call $game/PlayerShip/PlayerShip#get:position
-     f32.load
-     call $~lib/staticarray/StaticArray<f32>#__set
-     local.get $0
-     f32.const 1.5707950592041016
-     call $game/PlayerShip/PlayerShip#set:_rotation
-    else
-     local.get $0
-     call $game/PlayerShip/PlayerShip#get:position
-     local.get $0
-     call $game/PlayerShip/PlayerShip#get:position
-     f32.load
-     global.get $game/iShip/VELOCITY
-     f32.add
-     call $game/Vector/Vector#set:x
-     local.get $0
-     i32.load offset=12
-     local.set $1
-     global.get $~lib/memory/__stack_pointer
-     local.get $1
-     i32.store
-     local.get $1
-     i32.const 0
-     local.get $0
-     call $game/PlayerShip/PlayerShip#get:position
-     f32.load
-     call $~lib/staticarray/StaticArray<f32>#__set
-     local.get $0
-     f32.const 4.712385177612305
-     call $game/PlayerShip/PlayerShip#set:_rotation
-    end
-   end
-  end
-  local.get $0
-  local.get $0
-  f32.load offset=16
-  global.get $game/iShip/VELOCITY
-  f32.add
-  call $game/PlayerShip/PlayerShip#set:lastTrailDist
-  local.get $0
-  f32.load offset=16
-  global.get $game/iShip/TRAIL_DIST
-  f32.ge
-  if
-   local.get $0
-   call $game/PlayerShip/PlayerShip#shiftTrail
-   local.get $0
-   f32.const 0
-   call $game/PlayerShip/PlayerShip#set:lastTrailDist
-  end
-  local.get $0
-  call $game/PlayerShip/PlayerShip#get:position
-  f32.load
-  f32.const 1
-  f32.gt
-  if
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   f32.const 1
-   call $game/Vector/Vector#set:x
-  else
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   f32.load
-   f32.const -1
-   f32.lt
-   if
-    local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
-    f32.const -1
-    call $game/Vector/Vector#set:x
-   end
-  end
-  local.get $0
-  call $game/PlayerShip/PlayerShip#get:position
-  f32.load offset=4
-  f32.const 1
-  f32.gt
-  if
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   f32.const 1
-   call $game/Vector/Vector#set:y
-  else
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   f32.load offset=4
-   f32.const -1
-   f32.lt
-   if
-    local.get $0
-    call $game/PlayerShip/PlayerShip#get:position
-    f32.const -1
-    call $game/Vector/Vector#set:y
-   end
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $game/PlayerShip/PlayerShip#draw (param $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i64.const 0
-  i64.store
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store offset=8
-  local.get $0
-  i32.load8_u offset=28
-  i32.const 0
-  i32.ne
-  i32.const 1
-  i32.eq
-  if
-   global.get $game/Renderer/Renderer.SN
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store
-   local.get $1
-   local.get $0
-   i32.load offset=36
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   local.get $0
-   f32.load offset=8
-   local.get $0
-   f32.load offset=32
-   i32.const 16711935
-   i32.const 1
-   call $game/Renderer/Renderer#renderLineLoop
-   global.get $game/Renderer/Renderer.SN
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store
-   local.get $1
-   local.get $0
-   i32.load offset=40
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   local.get $0
-   f32.load offset=8
-   local.get $0
-   f32.load offset=32
-   i32.const 16777215
-   i32.const 1
-   call $game/Renderer/Renderer#renderLineLoop
-   global.get $game/Renderer/Renderer.SN
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store
-   local.get $1
-   local.get $0
-   i32.load offset=44
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   local.get $0
-   f32.load offset=8
-   local.get $0
-   f32.load offset=32
-   i32.const -1593835265
-   i32.const 1
-   call $game/Renderer/Renderer#renderLineLoop
-   global.get $game/Renderer/Renderer.SN
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store
-   local.get $1
-   local.get $0
-   i32.load offset=48
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   local.get $0
-   call $game/PlayerShip/PlayerShip#get:position
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   local.get $0
-   f32.load offset=8
-   local.get $0
-   f32.load offset=32
-   i32.const -1593835265
-   i32.const 1
-   call $game/Renderer/Renderer#renderLineLoop
-   global.get $game/Renderer/Renderer.SN
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store
-   local.get $1
-   local.get $0
-   i32.load offset=12
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   global.get $game/PlayerShip/ZERO_VEC
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   f32.const 0
-   f32.const 1
-   i32.const 16711935
-   i32.const 0
-   call $game/Renderer/Renderer#renderLineLoop
-  end
-  global.get $~lib/memory/__stack_pointer
-  i32.const 12
-  i32.add
-  global.set $~lib/memory/__stack_pointer
- )
- (func $game/EnemyShip/EnemyShip#move (param $0 i32)
-  (local $1 i32)
-  global.get $~lib/memory/__stack_pointer
-  i32.const 4
-  i32.sub
-  global.set $~lib/memory/__stack_pointer
-  call $~stack_check
-  global.get $~lib/memory/__stack_pointer
-  i32.const 0
-  i32.store
-  local.get $0
-  i32.load
-  global.get $game/iShip/DIRECTION.UP
-  i32.eq
-  if
-   local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
-   local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    f32.load offset=4
    global.get $game/iShip/VELOCITY
    f32.add
@@ -10243,12 +10293,12 @@
    local.get $1
    i32.const 1
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    f32.load offset=4
    call $~lib/staticarray/StaticArray<f32>#__set
    local.get $0
    f32.const 3.141590118408203
-   call $game/EnemyShip/EnemyShip#set:_rotation
+   call $game/GenericShip/GenericShip#set:_rotation
   else
    local.get $0
    i32.load
@@ -10256,9 +10306,9 @@
    i32.eq
    if
     local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     f32.load offset=4
     global.get $game/iShip/VELOCITY
     f32.sub
@@ -10272,12 +10322,12 @@
     local.get $1
     i32.const 1
     local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     f32.load offset=4
     call $~lib/staticarray/StaticArray<f32>#__set
     local.get $0
     f32.const 0
-    call $game/EnemyShip/EnemyShip#set:_rotation
+    call $game/GenericShip/GenericShip#set:_rotation
    else
     local.get $0
     i32.load
@@ -10285,9 +10335,9 @@
     i32.eq
     if
      local.get $0
-     call $game/EnemyShip/EnemyShip#get:position
+     call $game/GenericShip/GenericShip#get:position
      local.get $0
-     call $game/EnemyShip/EnemyShip#get:position
+     call $game/GenericShip/GenericShip#get:position
      f32.load
      global.get $game/iShip/VELOCITY
      f32.sub
@@ -10301,17 +10351,17 @@
      local.get $1
      i32.const 0
      local.get $0
-     call $game/EnemyShip/EnemyShip#get:position
+     call $game/GenericShip/GenericShip#get:position
      f32.load
      call $~lib/staticarray/StaticArray<f32>#__set
      local.get $0
      f32.const 1.5707950592041016
-     call $game/EnemyShip/EnemyShip#set:_rotation
+     call $game/GenericShip/GenericShip#set:_rotation
     else
      local.get $0
-     call $game/EnemyShip/EnemyShip#get:position
+     call $game/GenericShip/GenericShip#get:position
      local.get $0
-     call $game/EnemyShip/EnemyShip#get:position
+     call $game/GenericShip/GenericShip#get:position
      f32.load
      global.get $game/iShip/VELOCITY
      f32.add
@@ -10325,12 +10375,12 @@
      local.get $1
      i32.const 0
      local.get $0
-     call $game/EnemyShip/EnemyShip#get:position
+     call $game/GenericShip/GenericShip#get:position
      f32.load
      call $~lib/staticarray/StaticArray<f32>#__set
      local.get $0
      f32.const 4.712385177612305
-     call $game/EnemyShip/EnemyShip#set:_rotation
+     call $game/GenericShip/GenericShip#set:_rotation
     end
    end
   end
@@ -10339,60 +10389,60 @@
   f32.load offset=20
   global.get $game/iShip/VELOCITY
   f32.add
-  call $game/EnemyShip/EnemyShip#set:lastTrailDist
+  call $game/GenericShip/GenericShip#set:lastTrailDist
   local.get $0
   f32.load offset=20
   global.get $game/iShip/TRAIL_DIST
   f32.ge
   if
    local.get $0
-   call $game/EnemyShip/EnemyShip#shiftTrail
+   call $game/GenericShip/GenericShip#shiftTrail
    local.get $0
    f32.const 0
-   call $game/EnemyShip/EnemyShip#set:lastTrailDist
+   call $game/GenericShip/GenericShip#set:lastTrailDist
   end
   local.get $0
-  call $game/EnemyShip/EnemyShip#get:position
+  call $game/GenericShip/GenericShip#get:position
   f32.load
   f32.const 1
   f32.gt
   if
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    f32.const 1
    call $game/Vector/Vector#set:x
   else
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    f32.load
    f32.const -1
    f32.lt
    if
     local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     f32.const -1
     call $game/Vector/Vector#set:x
    end
   end
   local.get $0
-  call $game/EnemyShip/EnemyShip#get:position
+  call $game/GenericShip/GenericShip#get:position
   f32.load offset=4
   f32.const 1
   f32.gt
   if
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    f32.const 1
    call $game/Vector/Vector#set:y
   else
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    f32.load offset=4
    f32.const -1
    f32.lt
    if
     local.get $0
-    call $game/EnemyShip/EnemyShip#get:position
+    call $game/GenericShip/GenericShip#get:position
     f32.const -1
     call $game/Vector/Vector#set:y
    end
@@ -10402,7 +10452,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $game/EnemyShip/EnemyShip#draw (param $0 i32)
+ (func $game/GenericShip/GenericShip#draw (param $0 i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 12
@@ -10429,14 +10479,14 @@
    i32.store
    local.get $1
    local.get $0
-   i32.load offset=36
+   i32.load offset=52
    local.set $1
    global.get $~lib/memory/__stack_pointer
    local.get $1
    i32.store offset=4
    local.get $1
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    local.set $1
    global.get $~lib/memory/__stack_pointer
    local.get $1
@@ -10445,8 +10495,9 @@
    local.get $0
    f32.load offset=8
    local.get $0
-   f32.load offset=32
-   i32.const -16776961
+   f32.load offset=48
+   local.get $0
+   i32.load offset=36
    i32.const 1
    call $game/Renderer/Renderer#renderLineLoop
    global.get $game/Renderer/Renderer.SN
@@ -10455,25 +10506,26 @@
    local.get $1
    i32.store
    local.get $1
+   local.get $0
+   i32.load offset=56
+   local.set $1
+   global.get $~lib/memory/__stack_pointer
+   local.get $1
+   i32.store offset=4
+   local.get $1
+   local.get $0
+   call $game/GenericShip/GenericShip#get:position
+   local.set $1
+   global.get $~lib/memory/__stack_pointer
+   local.get $1
+   i32.store offset=8
+   local.get $1
+   local.get $0
+   f32.load offset=8
+   local.get $0
+   f32.load offset=48
    local.get $0
    i32.load offset=40
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   local.get $0
-   f32.load offset=8
-   local.get $0
-   f32.load offset=32
-   i32.const 16777215
    i32.const 1
    call $game/Renderer/Renderer#renderLineLoop
    global.get $game/Renderer/Renderer.SN
@@ -10482,25 +10534,26 @@
    local.get $1
    i32.store
    local.get $1
+   local.get $0
+   i32.load offset=60
+   local.set $1
+   global.get $~lib/memory/__stack_pointer
+   local.get $1
+   i32.store offset=4
+   local.get $1
+   local.get $0
+   call $game/GenericShip/GenericShip#get:position
+   local.set $1
+   global.get $~lib/memory/__stack_pointer
+   local.get $1
+   i32.store offset=8
+   local.get $1
+   local.get $0
+   f32.load offset=8
+   local.get $0
+   f32.load offset=48
    local.get $0
    i32.load offset=44
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=4
-   local.get $1
-   local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
-   local.set $1
-   global.get $~lib/memory/__stack_pointer
-   local.get $1
-   i32.store offset=8
-   local.get $1
-   local.get $0
-   f32.load offset=8
-   local.get $0
-   f32.load offset=32
-   i32.const -1593835265
    i32.const 1
    call $game/Renderer/Renderer#renderLineLoop
    global.get $game/Renderer/Renderer.SN
@@ -10510,14 +10563,14 @@
    i32.store
    local.get $1
    local.get $0
-   i32.load offset=48
+   i32.load offset=64
    local.set $1
    global.get $~lib/memory/__stack_pointer
    local.get $1
    i32.store offset=4
    local.get $1
    local.get $0
-   call $game/EnemyShip/EnemyShip#get:position
+   call $game/GenericShip/GenericShip#get:position
    local.set $1
    global.get $~lib/memory/__stack_pointer
    local.get $1
@@ -10526,8 +10579,9 @@
    local.get $0
    f32.load offset=8
    local.get $0
-   f32.load offset=32
-   i32.const -1593835265
+   f32.load offset=48
+   local.get $0
+   i32.load offset=44
    i32.const 1
    call $game/Renderer/Renderer#renderLineLoop
    global.get $game/Renderer/Renderer.SN
@@ -10543,7 +10597,7 @@
    local.get $1
    i32.store offset=4
    local.get $1
-   global.get $game/EnemyShip/ZERO_VEC
+   global.get $game/GenericShip/ZERO_VEC
    local.set $1
    global.get $~lib/memory/__stack_pointer
    local.get $1
@@ -10551,7 +10605,8 @@
    local.get $1
    f32.const 0
    f32.const 1
-   i32.const -16776961
+   local.get $0
+   i32.load offset=32
    i32.const 0
    call $game/Renderer/Renderer#renderLineLoop
   end
@@ -10579,7 +10634,7 @@
   i32.store offset=8
   global.get $game/MultiSnake/MultiSnake.SN
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=32
+  i32.load offset=36
   local.get $0
   i32.sub
   call $game/MultiSnake/MultiSnake#set:bulletCoolDown
@@ -10598,50 +10653,50 @@
   local.get $1
   if
    global.get $game/MultiSnake/MultiSnake.SN
-   i32.load offset=12
+   i32.load offset=16
    local.set $10
    global.get $~lib/memory/__stack_pointer
    local.get $10
    i32.store
    local.get $10
    global.get $game/iShip/DIRECTION.LEFT
-   call $game/PlayerShip/PlayerShip#changeDirection
+   call $game/GenericShip/GenericShip#changeDirection
   else
    local.get $2
    if
     global.get $game/MultiSnake/MultiSnake.SN
-    i32.load offset=12
+    i32.load offset=16
     local.set $10
     global.get $~lib/memory/__stack_pointer
     local.get $10
     i32.store
     local.get $10
     global.get $game/iShip/DIRECTION.RIGHT
-    call $game/PlayerShip/PlayerShip#changeDirection
+    call $game/GenericShip/GenericShip#changeDirection
    else
     local.get $3
     if
      global.get $game/MultiSnake/MultiSnake.SN
-     i32.load offset=12
+     i32.load offset=16
      local.set $10
      global.get $~lib/memory/__stack_pointer
      local.get $10
      i32.store
      local.get $10
      global.get $game/iShip/DIRECTION.UP
-     call $game/PlayerShip/PlayerShip#changeDirection
+     call $game/GenericShip/GenericShip#changeDirection
     else
      local.get $4
      if
       global.get $game/MultiSnake/MultiSnake.SN
-      i32.load offset=12
+      i32.load offset=16
       local.set $10
       global.get $~lib/memory/__stack_pointer
       local.get $10
       i32.store
       local.get $10
       global.get $game/iShip/DIRECTION.DOWN
-      call $game/PlayerShip/PlayerShip#changeDirection
+      call $game/GenericShip/GenericShip#changeDirection
      end
     end
    end
@@ -10649,7 +10704,7 @@
   local.get $5
   if (result i32)
    global.get $game/MultiSnake/MultiSnake.SN
-   i32.load offset=32
+   i32.load offset=36
    i32.const 0
    i32.le_s
   else
@@ -10744,7 +10799,7 @@
      i32.store
      local.get $10
      global.get $game/MultiSnake/MultiSnake.SN
-     i32.load offset=16
+     i32.load offset=20
      local.set $10
      global.get $~lib/memory/__stack_pointer
      local.get $10
@@ -10756,13 +10811,13 @@
      if
       call $game/MultiSnake/playExplosion
       global.get $game/MultiSnake/MultiSnake.SN
-      i32.load offset=16
+      i32.load offset=20
       local.set $10
       global.get $~lib/memory/__stack_pointer
       local.get $10
       i32.store
       local.get $10
-      call $game/EnemyShip/EnemyShip#explode
+      call $game/GenericShip/GenericShip#explode
      end
     end
     local.get $6
@@ -10848,7 +10903,7 @@
      i32.store
      local.get $10
      global.get $game/MultiSnake/MultiSnake.SN
-     i32.load offset=12
+     i32.load offset=16
      local.set $10
      global.get $~lib/memory/__stack_pointer
      local.get $10
@@ -10860,13 +10915,13 @@
      if
       call $game/MultiSnake/playExplosion
       global.get $game/MultiSnake/MultiSnake.SN
-      i32.load offset=12
+      i32.load offset=16
       local.set $10
       global.get $~lib/memory/__stack_pointer
       local.get $10
       i32.store
       local.get $10
-      call $game/PlayerShip/PlayerShip#explode
+      call $game/GenericShip/GenericShip#explode
      end
     end
     local.get $9
@@ -10930,21 +10985,13 @@
    end
   end
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=12
+  i32.load offset=16
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
   i32.store
   local.get $10
-  call $game/PlayerShip/PlayerShip#move
-  global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=12
-  local.set $10
-  global.get $~lib/memory/__stack_pointer
-  local.get $10
-  i32.store
-  local.get $10
-  call $game/PlayerShip/PlayerShip#draw
+  call $game/GenericShip/GenericShip#move
   global.get $game/MultiSnake/MultiSnake.SN
   i32.load offset=16
   local.set $10
@@ -10952,15 +10999,23 @@
   local.get $10
   i32.store
   local.get $10
-  call $game/EnemyShip/EnemyShip#move
+  call $game/GenericShip/GenericShip#draw
   global.get $game/MultiSnake/MultiSnake.SN
-  i32.load offset=16
+  i32.load offset=20
   local.set $10
   global.get $~lib/memory/__stack_pointer
   local.get $10
   i32.store
   local.get $10
-  call $game/EnemyShip/EnemyShip#draw
+  call $game/GenericShip/GenericShip#move
+  global.get $game/MultiSnake/MultiSnake.SN
+  i32.load offset=20
+  local.set $10
+  global.get $~lib/memory/__stack_pointer
+  local.get $10
+  i32.store
+  local.get $10
+  call $game/GenericShip/GenericShip#draw
   global.get $game/MultiSnake/MultiSnake.SN
   local.set $10
   global.get $~lib/memory/__stack_pointer
@@ -11758,6 +11813,134 @@
   global.set $~lib/memory/__stack_pointer
   local.get $4
  )
+ (func $~lib/arraybuffer/ArrayBuffer#constructor (param $0 i32) (param $1 i32) (result i32)
+  (local $2 i32)
+  (local $3 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  i32.const 1073741820
+  i32.gt_u
+  if
+   i32.const 3392
+   i32.const 4512
+   i32.const 49
+   i32.const 43
+   call $~lib/builtins/abort
+   unreachable
+  end
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.const 0
+  call $~lib/rt/itcms/__new
+  local.tee $2
+  i32.store
+  local.get $2
+  i32.const 0
+  local.get $1
+  call $~lib/memory/memory.fill
+  local.get $2
+  local.set $3
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $3
+ )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 24
+   i32.const 32
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 4
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:buckets
+  local.get $0
+  i32.const 4
+  i32.const 1
+  i32.sub
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:bucketsMask
+  local.get $0
+  i32.const 0
+  i32.const 4
+  i32.const 12
+  i32.mul
+  call $~lib/arraybuffer/ArrayBuffer#constructor
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entries
+  local.get $0
+  i32.const 4
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesCapacity
+  local.get $0
+  i32.const 0
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesOffset
+  local.get $0
+  i32.const 0
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesCount
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $game/Ship/Ship#constructor (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $0
+  i32.eqz
+  if
+   global.get $~lib/memory/__stack_pointer
+   i32.const 4
+   i32.const 29
+   call $~lib/rt/itcms/__new
+   local.tee $0
+   i32.store
+  end
+  local.get $0
+  i32.const 0
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#constructor
+  call $game/Ship/Ship#set:ships
+  local.get $0
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
  (func $~lib/staticarray/StaticArray<f32>#constructor (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (local $3 i32)
@@ -11777,7 +11960,7 @@
   i32.gt_u
   if
    i32.const 3392
-   i32.const 4320
+   i32.const 4384
    i32.const 88
    i32.const 60
    call $~lib/builtins/abort
@@ -11805,6 +11988,137 @@
   global.set $~lib/memory/__stack_pointer
   local.get $4
  )
+ (func $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (local $7 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  i32.const 0
+  i32.store
+  local.get $1
+  call $~lib/util/hash/HASH<~lib/string/String>
+  local.set $3
+  local.get $0
+  local.get $1
+  local.get $3
+  call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#find
+  local.set $4
+  local.get $4
+  if
+   local.get $4
+   local.get $2
+   call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:value
+   i32.const 1
+   drop
+   local.get $0
+   local.get $2
+   i32.const 1
+   call $~lib/rt/itcms/__link
+  else
+   local.get $0
+   i32.load offset=16
+   local.get $0
+   i32.load offset=12
+   i32.eq
+   if
+    local.get $0
+    local.get $0
+    i32.load offset=20
+    local.get $0
+    i32.load offset=12
+    i32.const 3
+    i32.mul
+    i32.const 4
+    i32.div_s
+    i32.lt_s
+    if (result i32)
+     local.get $0
+     i32.load offset=4
+    else
+     local.get $0
+     i32.load offset=4
+     i32.const 1
+     i32.shl
+     i32.const 1
+     i32.or
+    end
+    call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#rehash
+   end
+   global.get $~lib/memory/__stack_pointer
+   local.get $0
+   i32.load offset=8
+   local.tee $5
+   i32.store
+   local.get $5
+   local.get $0
+   local.get $0
+   i32.load offset=16
+   local.tee $6
+   i32.const 1
+   i32.add
+   call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesOffset
+   local.get $6
+   i32.const 12
+   i32.mul
+   i32.add
+   local.set $4
+   local.get $4
+   local.get $1
+   call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:key
+   i32.const 1
+   drop
+   local.get $0
+   local.get $1
+   i32.const 1
+   call $~lib/rt/itcms/__link
+   local.get $4
+   local.get $2
+   call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:value
+   i32.const 1
+   drop
+   local.get $0
+   local.get $2
+   i32.const 1
+   call $~lib/rt/itcms/__link
+   local.get $0
+   local.get $0
+   i32.load offset=20
+   i32.const 1
+   i32.add
+   call $~lib/map/Map<~lib/string/String,game/GenericShip/GenericShip>#set:entriesCount
+   local.get $0
+   i32.load
+   local.get $3
+   local.get $0
+   i32.load offset=4
+   i32.and
+   i32.const 4
+   i32.mul
+   i32.add
+   local.set $6
+   local.get $4
+   local.get $6
+   i32.load
+   call $~lib/map/MapEntry<~lib/string/String,game/GenericShip/GenericShip>#set:taggedNext
+   local.get $6
+   local.get $4
+   i32.store
+  end
+  local.get $0
+  local.set $7
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $7
+ )
  (func $game/WebSocket/WebSocket#constructor (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (local $3 i32)
@@ -11821,7 +12135,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 8
-   i32.const 32
+   i32.const 33
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -11861,7 +12175,7 @@
   if
    global.get $~lib/memory/__stack_pointer
    i32.const 5
-   i32.const 36
+   i32.const 37
    call $~lib/rt/itcms/__new
    local.tee $0
    i32.store
@@ -12062,7 +12376,7 @@
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $export:game/MultiSnake/MultiSnake#get:playerShip (param $0 i32) (result i32)
+ (func $export:game/MultiSnake/MultiSnake#get:ships (param $0 i32) (result i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
@@ -12073,7 +12387,7 @@
   local.get $0
   i32.store
   local.get $0
-  call $game/MultiSnake/MultiSnake#get:playerShip
+  call $game/MultiSnake/MultiSnake#get:ships
   local.set $1
   global.get $~lib/memory/__stack_pointer
   i32.const 4
@@ -12081,7 +12395,7 @@
   global.set $~lib/memory/__stack_pointer
   local.get $1
  )
- (func $export:game/MultiSnake/MultiSnake#set:playerShip (param $0 i32) (param $1 i32)
+ (func $export:game/MultiSnake/MultiSnake#set:ships (param $0 i32) (param $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.sub
@@ -12095,13 +12409,13 @@
   i32.store offset=4
   local.get $0
   local.get $1
-  call $game/MultiSnake/MultiSnake#set:playerShip
+  call $game/MultiSnake/MultiSnake#set:ships
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.add
   global.set $~lib/memory/__stack_pointer
  )
- (func $export:game/MultiSnake/MultiSnake#get:enemyShip (param $0 i32) (result i32)
+ (func $export:game/MultiSnake/MultiSnake#get:playerOneShip (param $0 i32) (result i32)
   (local $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 4
@@ -12112,7 +12426,7 @@
   local.get $0
   i32.store
   local.get $0
-  call $game/MultiSnake/MultiSnake#get:enemyShip
+  call $game/MultiSnake/MultiSnake#get:playerOneShip
   local.set $1
   global.get $~lib/memory/__stack_pointer
   i32.const 4
@@ -12120,7 +12434,7 @@
   global.set $~lib/memory/__stack_pointer
   local.get $1
  )
- (func $export:game/MultiSnake/MultiSnake#set:enemyShip (param $0 i32) (param $1 i32)
+ (func $export:game/MultiSnake/MultiSnake#set:playerOneShip (param $0 i32) (param $1 i32)
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.sub
@@ -12134,7 +12448,46 @@
   i32.store offset=4
   local.get $0
   local.get $1
-  call $game/MultiSnake/MultiSnake#set:enemyShip
+  call $game/MultiSnake/MultiSnake#set:playerOneShip
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+ )
+ (func $export:game/MultiSnake/MultiSnake#get:playerTwoShip (param $0 i32) (result i32)
+  (local $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  local.get $0
+  call $game/MultiSnake/MultiSnake#get:playerTwoShip
+  local.set $1
+  global.get $~lib/memory/__stack_pointer
+  i32.const 4
+  i32.add
+  global.set $~lib/memory/__stack_pointer
+  local.get $1
+ )
+ (func $export:game/MultiSnake/MultiSnake#set:playerTwoShip (param $0 i32) (param $1 i32)
+  global.get $~lib/memory/__stack_pointer
+  i32.const 8
+  i32.sub
+  global.set $~lib/memory/__stack_pointer
+  call $~stack_check
+  global.get $~lib/memory/__stack_pointer
+  local.get $0
+  i32.store
+  global.get $~lib/memory/__stack_pointer
+  local.get $1
+  i32.store offset=4
+  local.get $0
+  local.get $1
+  call $game/MultiSnake/MultiSnake#set:playerTwoShip
   global.get $~lib/memory/__stack_pointer
   i32.const 8
   i32.add
